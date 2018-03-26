@@ -1,0 +1,41 @@
+
+html{
+  width: 100%;
+  height: 100%;
+    background: url('../images/background3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+/*
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+}
+
+body{
+  width: 100%;
+  height: 100%;
+}
+
+
+.pic{
+  max-height: 30%;
+  min-height: 300px;
+  max-width: 30%;
+  min-width: 300px;
+    margin: auto;
+}
+
+.profilePic{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+
+}
+
+.myInfo{
+    margin: auto;
+
+}
