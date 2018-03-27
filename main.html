@@ -8,6 +8,15 @@
   </head>
   <body >
 
+   <div class="navMenu" id ="myNavMenu">
+      <ul>
+        <li class ="navContent"><a href="#projects">Contact</a></li>
+        <li class ="navContent"><a href="#about">About</a></li>
+        <li class ="navContent"><a href="#contact">Projects</a></li>
+        <li><a class="active" href="#about">Harkeerat Chhina</a></li>
+    </ul>
+  </div>
+
     <div class="profilePic">
 
       <img src="images/icon.png" alt="profile icon" class ="pic">
@@ -16,23 +25,20 @@
 
       <div class = "myInfo">
         <p> hi My name is harkeerat .....</p>
-          <p> hi My name is harkeerat .....</p>
-            <p> hi My name is harkeerat .....</p>
-              <p> hi My name is harkeerat .....</p>
-                <p> hi My name is harkeerat .....</p>
-                  <p> hi My name is harkeerat .....</p>
-                    <p> hi My name is harkeerat .....</p>
-                      <p> hi My name is harkeerat .....</p>
-                        <p> hi My name is harkeerat .....</p>
-                          <p> hi My name is harkeerat .....</p>
-                            <p> hi My name is harkeerat .....</p>
-                              <p> hi My name is harkeerat .....</p>
-                                <p> hi My name is harkeerat .....</p>
-                                
 
       </div>
     </div>
 
 
   </body>
+
+
+  <script>
+    function myFunction() {
+        var x = document.getElementById("myNavMenu");
+        if (x.className === "navMenu") { x.className += " responsive"; }
+        else { x.className = "topnav";  }
+    }
+</script>
+
 </html>

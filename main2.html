@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main2.css" rel="stylesheet">
+  </head>
+  <body >
+
+
+
+    <div class="profilePic">
+
+      <div class="topnav" id ="myTopnav">
+          <a href="#home" class="active">Harkeerat Chhina</a>
+         <a href="#news" class="navContent">Projects</a>
+         <a href="#contact" class="navContent">About</a>
+         <a href="#about" class="navContent">Contact</a>
+         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+     </div>
+
+
+
+      <img src="images/icon.png" alt="profile icon" class ="pic">
+      <div class = "myInfo">
+        <h1> Game Designer</h1>
+      </div>
+    </div>
+
+    <div class ="theWordProjects">
+            <h2> projects </h2>
+    </div>
+
+    <div class ="projectContainer">
+
+      <div class="container">
+         <a href="#" >
+              <img src="images/revengening.png" alt="profile icon" class ="pp" onmouseover="this.src='images/revengeningHover.png'" onmouseout="this.src='images/revengening.png'">
+        </a>
+      <!-- <img src="images/revengening.png" alt="profile icon" class ="pp" id ="revenge" onmouseover="onHover()" onmouseout="offHover()"> -->
+        <h2 class ="pieceTitle"> Revengening </h2>
+      </div>
+
+      <div class="container">
+        <img src="images/revengening.png" alt="profile icon" class ="pp">
+        <h2 class ="pieceTitle">Revengening </h2>
+      </div>
+
+      <div class="container">
+        <img src="images/revengening.png" alt="profile icon" class ="pp">
+        <h2 class ="pieceTitle"> Revengening </h2>
+      </div>
+
+    </div>
+
+
+    <script>
+      function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") { x.className += " responsive"; }
+          else { x.className = "topnav";  }
+      }
+  </script>
+
+  <script>
+      function onHover()    {
+          $("#revenge").attr('src', 'images/revengeningHover.png');
+      }
+      function offHover()    {
+          $("#revenge").attr('src', 'images/revengening.png');
+      }
+  </script>
+
+
+
+  </body>
+
+
+
+
+</html>
