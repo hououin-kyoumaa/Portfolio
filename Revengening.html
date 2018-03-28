@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/revengening.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  </head>
+  <body >
+
+    <div class="topnav" id ="myTopnav">
+        <div class ="floatRight" id = "insideTopNav">
+          <a href="#main3.html" class="active" id ="name">Harkeerat Chhina</a>
+          <a href="#main3.html#about" class="navContent" id ="navItem1">Contact</a>
+          <a href="#main3.html#about" class="navContent" id ="navItem2">About</a>
+          <a href="main3.html#myProjects" class="navContent" id ="navItem3">Projects</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+   </div>
+
+    <div class="profilePic">  </div>
+
+    <div class ="projectContent" id ="projectContentPadding">
+      <div class="contentContainer">
+            <h2 class ="kongtext"> Context </h2>
+            <p class ="context">  3 Week Project. The goal of was to create a game with a complete narrative with several instances of foldback structure.  </p>
+      </div>
+      <div class="contentContainer">
+          <p id ="padding-top"> Team: Clinton Walsh, Harkeerat Chhina, Darren MacPhail  </p>
+          <p> Role: Level Design, Cut-scenes, Playtesting  </p>
+          <p> Tools: Unity, C#, Java  </p>
+      </div>
+    </div>
+
+    <div class ="projectContent">
+      <div class="contentContainer">
+            <h2 class ="kongtext"> Narrative </h2>
+            <p class ="context"> Set in the year 1986, a few days after the election of United States President Lex Mathension his daughter,
+               Leia Mathension is kidnapped by an unknown Terrorist group. Players will take control of Rex, a black ops mercenary who is
+                a master of hand to hand combat and stealth. Can Rex infiltrate the Terrorists’ various bases, uncover their identity,
+                motives and most importantly, save the president’s daughter?
+            </p>
+      </div>
+      <div class="contentContainer">
+          <img src ="images/kidnap.png" class = "kidnapImg" alt="kidnap">
+      </div>
+    </div>
+
+    <div class ="projectContent">
+      <div class="contentContainer">
+            <h2 class ="kongtext"> Process </h2>
+            <p class ="context"> We started whiteboxing early in the development process to develop our internal mechanics. We gradually
+              insereted assets and artifacts, as our artist created content. Levels were first sketched onto paper and then translated
+               into game. They were designed such that the initial and final level were created first. This approach was used to determine
+               the maximum and minimum difficulty of the game. By using this particular approach, it allowed for a more fluid transition
+               of difficulty. While we tried to generate progressively harder level, ultimately playability and game balance were left to
+               play testers. The final product appears 2D, but is designed in 3D to take advantage of nav-meshes for AI pathfinding.
+            </p>
+      </div>
+      <div class="contentContainer">
+          <img src ="images/whiteBoxing3.png" class = "kidnapImg" alt="kidnap">
+      </div>
+    </div>
+
+    <div class ="projectContent">
+      <div class="contentContainer">
+          <img src ="images/levelDesign4.png" class = "kidnapImg" alt="kidnap">
+      </div>
+      <div class="contentContainer">
+          <img src ="images/leveldesign3.png" class = "kidnapImg" alt="kidnap">
+      </div>
+    </div>
+
+    <div class ="projectContent">
+      <div class="contentContainer">
+          <img src ="images/levelDesign.png" class = "kidnapImg" alt="kidnap">
+      </div>
+      <div class="contentContainer">
+          <img src ="images/levelDesign2.png" class = "kidnapImg" alt="kidnap">
+      </div>
+    </div>
+
+    <div class ="projectContent">
+      <div class="contentContainerLong">
+            <h2 class ="kongtext"> AI </h2>
+            <p class ="context"> The AI, has 3 states: The patrol state is defined by the nav-mesh markers placed in the scene.
+              The investigate state activates when the players enters the AI's vision cone but manages to evade the AI. the
+              AI will then proceed to search 360 degrees in case the player is in the AI's blind spot before return back to the
+              patrol state. The alert state is when the player is actively in the AI's vision radius.
+            </p>
+
+              <img src ="images/states.png" class = "kidnapImg" alt="kidnap">
+      </div>
+      <div class="contentContainerLong">
+          <img src ="images/pathfinding.png" class = "kidnapImg" alt="kidnap">
+      </div>
+    </div>
+
+
+    <div class ="projectContent">
+      <div class="contentContainerLong">
+            <h2 class ="kongtext"> Playtesting </h2>
+            <p class ="context"> Testing was primarily conducted between a single tester and a member of our team. This choice was made to prevent
+               influences from other play testers. During game play no explanation was provided to make sure that players understood the instructions
+                and were able to independently play the game without outside assistance. As the moderator, I only interfered if the player was
+                extremely confused or if they found a bug or error with the game. After playing through the game, or at least part of the game,
+                we presented a simple list of questions, as see in figure 3, such as; “Did you understand how to bypass enemies? What was you
+                preferred plan in getting through level x?”. We performed three different tests with, with three different testers, one being a
+                novice gamer with the others describing themselves as experts or advanced. The main goal of the questions was to determine whether
+                or not our game's mechanics were effectively taught and that players could grasp our mechanics as well as understand the narrative.
+            </p>
+      </div>
+      <div class="contentContainerLong">
+          <img src ="images/playtesting.png" class = "kidnapImg" alt="kidnap">
+      </div>
+    </div>
+
+
+        <div class ="projectContent">
+          <div class="contentContainerLong">
+                <h2 class ="kongtext"> Results </h2>
+                <p class ="context"> Feedback from our playtesting session indicated our punch mechanic was not intuitive. Players can choose to kill or
+                   temporarily knock out enemy AI. This choice will ultimately change how the game plays out. Initially the difference between a kill
+                   and knockout was determined by how hard a player presses the trigger button on a controller. Plyers were either pulled the trigger
+                   button all the way or could not determine the threshold between kill and knockout. We separate the mechanic between two buttons where
+                   the left trigger would kill and the right trigger became knockout. Other changes included level redesign, and arrangement as some levels
+                   were too easy while others were proving to be quite difficult. Certain levels were scrapped due to too much congestion. Finally we made
+                   the AI’s line of site smaller to better fit our level sizes.
+                </p>
+
+                <p id ="context">In further iterations we would like to add different mechanics such as lasers and cameras, a visual redesign, and more complex
+                level design.
+                </p>
+          </div>
+          <div class="contentContainerLong">
+              <img src ="images/newstuff.png" class = "kidnapImg" alt="kidnap">
+          </div>
+        </div>
+
+
+
+
+        <div class="footer">
+               <div class="topFooter">
+                  <img src="images/fb2.png" class="socialMediaImg" alt="socialMedia">
+                  <img src="images/t2.png" class="socialMediaImg" alt="socialMedia">
+                  <img src="images/i3.png" class="socialMediaImg" alt="socialMedia">
+                  <img src="images/e2.png" class="socialMediaImg" alt="socialMedia">
+                   <p class ="footerTextA"> Simon Fraser University  250-13450 102 Ave, Surrey, BC V3T 0A3 </p>
+               </div>
+
+              <p class ="footerTextB"> &copy; Copyright. All Rights Reserved   |  <a href="url" class ="footerLinks">references </a>
+              | <a href="url" class ="footerLinks">style guide </a>  | <a href="https://github.com/IAT339/P02" class ="footerLinks">github </a> </p>
+
+        </div>
+
+
+
+
+
+
+    <script>
+      function myFunction() {
+          var x = document.getElementById("insideTopNav");
+          if (x.className === "floatRight") { x.className += " responsive"; }
+          else { x.className = "floatRight";  }
+      }
+
+      $(document).ready(function(){
+       var scroll_start = 0;
+       var startchange = $('#startchange');
+       var offset = startchange.offset();
+       $(document).scroll(function() {
+          scroll_start = $(this).scrollTop();
+          if(scroll_start > offset.top) {
+              $('#myTopnav').css('background-color', '#fff');
+              $('#navItem1').css('color', '#000');
+              $('#navItem2').css('color', '#000');
+              $('#navItem3').css('color', '#000');
+              $('#name').css('display', 'none');
+           }
+           else {
+              $('#myTopnav').css('background-color', 'transparent');
+              $('#navItem1').css('color', '#fff');
+              $('#navItem2').css('color', '#fff');
+              $('#navItem3').css('color', '#fff');
+                $('#name').css('display', 'block');
+           }
+       });
+    });
+    </script>
+
+
+  </body>
+</html>

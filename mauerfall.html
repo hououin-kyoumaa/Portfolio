@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/mauerfall.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  </head>
+  <body >
+
+    <div class="topnav" id ="myTopnav">
+        <div class ="floatRight" id = "insideTopNav">
+          <a href="main3.html" class="active" id ="name">Harkeerat Chhina</a>
+          <a href="main3.html#about" class="navContent" id ="navItem1">Contact</a>
+          <a href="#main3.html#about" class="navContent" id ="navItem2">About</a>
+          <a href="main3.html#myProjects" class="navContent" id ="navItem3">Projects</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+   </div>
+
+    <div class="profilePic">  </div>
+
+    <div class ="projectContent padding-top" id ="projectContentPadding">
+      <div class="contentContainer contentContainerSame">
+            <h2 class ="kongtext"> Overview </h2>
+            <p class ="context"> Project duration: 2.5 months Role: level design, play testing, modeling, audio.    </p>
+
+            <p class ="context"> Mauerfall is a stealth-adventure video game, in where the player takes on the role of Olivia, a 14-year old
+              girl who is living in East Germany during the Berlin Crisis in 1961.Pursued by the East German police, Olivia must escape East
+              Germany in order to reunite with her mother in West Berlin, which is blockaded by the Berlin Wall.
+            </p>
+            <p class ="context"> Tools: Unreal engine 4, Maya, photoshop, after effects, Audacity.         </p>
+      </div>
+      <div class="contentContainerVertical contentContainerSame">
+        <img src ="images/mauerfallOverview.png" class = "overviewImg" alt="overViewImg">
+
+      </div>
+    </div>
+
+    <div class ="projectContent padding-top">
+      <div class="contentContainer contentContainerSame">
+            <h2 class ="kongtext"> Narrative </h2>
+            <p class ="context"> 14 year old Olivia and her father wish to reunite with her mother in West Berlin, now surrounded by the Berlin Wall.
+              They must tread carefully through the streets of East Berlin, as guards are on the lookout for anyone wishing to escape East Germany.
+              They must act quickly though, as failed and successful attempts by other escapees are resulting in stronger reinforcements to the Wall,
+               making it more difficult to escape.
+            </p>
+      </div>
+      <div class="contentContainerHorizontal contentContainerSame">
+          <img src ="images/mauerfallNarrative.png" class = "narrativeImg" alt="narrativeImg">
+      </div>
+    </div>
+
+    <div class ="projectContent">
+      <div class="contentContainerSolo contentContainerSame">
+          <img src ="images/narrativeFlowboard.png" class = "narrativeFlowboardImg" alt="narrativeFlowboardImg">
+      </div>
+    </div>
+
+    <div class ="projectContent padding-top">
+      <div class="contentContainerTexySolo contentContainerSame">
+            <h2 class ="kongtext"> Mechanics </h2>
+            <p class ="contextSolo"> The core loop involves the player constantly running and avoiding the secret police using the city landscape or artifacts
+              such as cars and garbage cans as they make their way across each level. Getting caught by the police or failing to reach the Berlin wall in two
+              days results in a game over, resetting the player to the last save location. Getting to the wall within two days is the winning end condition.
+               Time acts as a non-renewable resource represented by the day/night cycle; a drain that is incrementally consumed independent of the player’s
+               actions. Throwing objects are a limited resource that the player can interact with and reuse, i.e. thrown again and again. The player is able
+                to interact with certain NPCs such as the secret police and characters that can be saved from the police. The game view isthird-person isometric.
+            </p>
+      </div>
+    </div>
+
+    <div class ="projectContent">
+        <div class="contentContainerAvgIng contentContainerSame">
+            <img src ="images/mauerfallMechanics.png" class = "mechanicsImg" alt="mechanicsImg">
+        </div>
+        <div class="contentContainerAvgIng contentContainerSame">
+            <img src ="images/mauerfallCoreloop.png" class = "coreloopImg" alt="coreLoopImg">
+        </div>
+    </div>
+
+    <div class ="projectContent">
+        <div class="contentContainerSolo contentContainerSame">
+            <img src ="images/mauerfallDayNight.png" class = "narrativeFlowboardImg" alt="dayNightimg">
+        </div>
+    </div>
+
+
+    <div class ="projectContent padding-top">
+        <div class="contentContainer contentContainerSame">
+              <h2 class ="kongtext"> Level Design </h2>
+              <p class ="context"> Levels were initially sketched on paper as proof on concept while experimenting with different layouts.
+                Promising level were then translated on grid paper to provide a sense of scale. The grid paper also helped define areas
+                of negative and positive space, along with specific location of various artifacts.
+              </p>
+        </div>
+        <div class="contentContainerAvgIng contentContainerSame">
+            <img src ="images/mauerfallLevelDesign.png" class = "coreloopImg" alt="leveldesignImg">
+        </div>
+    </div>
+
+    <div class ="projectContent">
+        <div class="contentContainerAvgIng contentContainerSame">
+            <img src ="images/mauerfallLevel1.png" class = "mechanicsImg" alt="level1">
+        </div>
+        <div class="contentContainerAvgIng contentContainerSame">
+            <img src ="images/mauerfallLevel2.png" class = "coreloopImg" alt="level2">
+        </div>
+    </div>
+
+    <div class ="projectContent padding-top">
+        <div class="contentContainer contentContainerSame">
+              <h2 class ="kongtext"> AI </h2>
+              <p class ="context"> While walking through the streets of Berlin, NPCs loyal to the policies of East Germany can report the player to
+                 the police allowing for dynamic enemy algorithms rather than static patrol points. Groups of AI can try and flank the player when
+                they are within their line of sight (applies during day and night).During the night cycle, the AI can also track the player by sound.
+                The more quickly the player moves, the more sound will be made from footsteps. If a sound is heard by the AI they will go
+                 investigate at the origin of the sound.
+              </p>
+        </div>
+        <div class="contentContainerVertical contentContainerSame">
+          <img src ="images/mauerfallAI.png" class = "overviewImg" alt="AI">
+        </div>
+    </div>
+
+
+
+    <div class ="projectContent padding-top">
+      <div class="contentContainerTexySolo contentContainerSame">
+            <h2 class ="kongtext"> Design </h2>
+            <p class ="contextSolo"> Mauerfall takes inspiration from several games such as Metal Gear Solid and Mark of the Ninja
+                                  for our mechanics, and Volume, Unfinished Swan, Mirror’s Edge for aesthetics. The stealth
+                                  genre is nothing new and some of the basic mechanics such as hiding behind objects is a
+                                  common element seen in this genre. Mauerfall takes elements from various different games and
+                                  incorporates them into an original, fictional narrative with semi historical accuracy.
+            </p>
+            <p class ="contextSolo"> As a team, we always try to justify our design choices. For example the protagonist, Olivia
+                                  doesn’t wish to do harm to anyone. Therefore, we decided that it was appropriate that she doesn't have a
+                                  means of fighting back such as using weapons like knives or guns.
+            </p>
+            <p class ="contextSolo">  Mauerfall is a game that focuses both on narrative and mechanics. The gameplay duration is a
+                                  main selling point of Mauerfall. Games such as The Last of Us and Portal while excelling in both
+                                  narrative and mechanics, tend to consume more time. Compared to those games, Mauerfall is
+                                  an inexpensive alternative that has an engaging story and interesting mechanics. For example,
+                                  while walking through the streets of Berlin, NPCs loyal to East Germany can report the player to
+                                  the police, allowing for dynamic enemy algorithms rather than static patrol points.
+            </p>
+      </div>
+    </div>
+
+    <div class ="projectContent padding-top">
+      <div class="contentContainer contentContainerSameCenter">
+            <h2 class ="kongtext"> Playtesting </h2>
+
+            <ol>
+              <li>Pre-Playtest</li>
+              <li>
+                  <ul>
+                    <li>Demographics questionnaire</li>
+                    <li>Game context document</li>
+                  </ul>
+              </li>
+              <li>Playtest</li>
+              <li>
+                <ul>
+                  <li>Take photos + observation notes</li>
+                </ul>
+              </li>
+
+              <li>Post-Playtest</li>
+              <li>
+                <ul>
+                  <li>Game context document</li>
+                </ul>
+              </li>
+
+          </ol>
+      </div>
+    </div>
+
+
+    <div class ="projectContent">
+        <div class="contentContainerAvgIng contentContainerSame">
+            <img src ="images/mauerfallPlaytesting1.png" class = "playtestImg" alt ="playtestImg">
+        </div>
+        <div class="contentContainerAvgIng contentContainerSame">
+            <img src ="images/mauerfallPlaytesting2.png" class = "playtestImg" alt ="playtestImg2">
+        </div>
+        <div class="contentContainerAvgIng contentContainerSame">
+            <img src ="images/mauerfallPlaytesting4.png" class = "playtestImg" alt ="playtestImg4">
+        </div>
+    </div>
+
+
+        <div class="footer">
+               <div class="topFooter">
+                  <img src="images/fb2.png" class="socialMediaImg" alt="socialMedia">
+                  <img src="images/t2.png" class="socialMediaImg" alt="socialMedia">
+                  <img src="images/i3.png" class="socialMediaImg" alt="socialMedia">
+                  <img src="images/e2.png" class="socialMediaImg" alt="socialMedia">
+                   <p class ="footerTextA"> Simon Fraser University  250-13450 102 Ave, Surrey, BC V3T 0A3 </p>
+               </div>
+
+              <p class ="footerTextB"> &copy; Copyright. All Rights Reserved   |  <a href="url" class ="footerLinks">references </a>
+              | <a href="url" class ="footerLinks">style guide </a>  | <a href="https://github.com/IAT339/P02" class ="footerLinks">github </a> </p>
+
+        </div>
+
+
+    <script>
+      function myFunction() {
+          var x = document.getElementById("insideTopNav");
+          if (x.className === "floatRight") { x.className += " responsive"; }
+          else { x.className = "floatRight";  }
+      }
+
+      $(document).ready(function(){
+       var scroll_start = 0;
+       var startchange = $('#startchange');
+       var offset = startchange.offset();
+       $(document).scroll(function() {
+          scroll_start = $(this).scrollTop();
+          if(scroll_start > offset.top) {
+              $('#myTopnav').css('background-color', '#fff');
+              $('#navItem1').css('color', '#000');
+              $('#navItem2').css('color', '#000');
+              $('#navItem3').css('color', '#000');
+              $('#name').css('display', 'none');
+           }
+           else {
+              $('#myTopnav').css('background-color', 'transparent');
+              $('#navItem1').css('color', '#fff');
+              $('#navItem2').css('color', '#fff');
+              $('#navItem3').css('color', '#fff');
+                $('#name').css('display', 'block');
+           }
+       });
+    });
+    </script>
+
+
+  </body>
+</html>
