@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/main2.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
   </head>
   <body >
-
-
 
     <div class="profilePic">
 
@@ -19,8 +19,6 @@
          <a href="#about" class="navContent">Contact</a>
          <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
      </div>
-
-
 
       <img src="images/icon.png" alt="profile icon" class ="pic">
       <div class = "myInfo">
@@ -36,21 +34,31 @@
 
       <div class="container">
          <a href="#" >
-              <img src="images/revengening.png" alt="profile icon" class ="pp" onmouseover="this.src='images/revengeningHover.png'" onmouseout="this.src='images/revengening.png'">
+              <img src="images/revengening.png" alt="profile icon" class ="pp" id ="revenge"
+              onmouseover="onHoverRevenge()" onmouseout="offHoverRevenge()">
         </a>
-      <!-- <img src="images/revengening.png" alt="profile icon" class ="pp" id ="revenge" onmouseover="onHover()" onmouseout="offHover()"> -->
+
         <h2 class ="pieceTitle"> Revengening </h2>
       </div>
 
       <div class="container">
-        <img src="images/revengening.png" alt="profile icon" class ="pp">
-        <h2 class ="pieceTitle">Revengening </h2>
+        <a href="#" >
+          <img src="images/Mauefall.PNG" alt="profile icon" class ="pp" id ="Mauerfall"
+          onmouseover="onHoverMauefall()" onmouseout="offHoverMauefall()">
+        </a>
+        <h2 class ="pieceTitle">Mauefall </h2>
       </div>
 
       <div class="container">
-        <img src="images/revengening.png" alt="profile icon" class ="pp">
-        <h2 class ="pieceTitle"> Revengening </h2>
+          <a href="#" >
+            <img src="images/TheRoyalTuna.png" alt="profile icon" class ="pp" id ="Tuna"
+              onmouseover="onHoverTuna()" onmouseout="offHoverTuna()">
+          </a>
+        <h2 class ="pieceTitle"> The Royal Tuna </h2>
       </div>
+    </div>
+
+    <div class = "VR">
 
     </div>
 
@@ -61,21 +69,29 @@
           if (x.className === "topnav") { x.className += " responsive"; }
           else { x.className = "topnav";  }
       }
-  </script>
-
-  <script>
-      function onHover()    {
+      function onHoverRevenge()    {
           $("#revenge").attr('src', 'images/revengeningHover.png');
       }
-      function offHover()    {
+      function offHoverRevenge()    {
           $("#revenge").attr('src', 'images/revengening.png');
+      }
+      function onHoverMauefall()    {
+          $("#Mauerfall").attr('src', 'images/MauefallHover.png');
+      }
+      function offHoverMauefall()    {
+          $("#Mauerfall").attr('src', 'images/Mauefall.png');
+      }
+      function onHoverTuna()    {
+          $("#Tuna").attr('src', 'images/TheRoyalTunaHover.png');
+      }
+      function offHoverTuna()    {
+          $("#Tuna").attr('src', 'images/TheRoyalTuna.png');
       }
   </script>
 
 
 
   </body>
-
 
 
 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main3.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  </head>
+  <body >
+
+    <div class="topnav" id ="myTopnav">
+        <div class ="floatRight" id = "insideTopNav">
+          <a href="#home" class="active" id ="name">Harkeerat Chhina</a>
+          <a href="#news" class="navContent"id ="navItem1">Projects</a>
+          <a href="#contact" class="navContent" id ="navItem2">About</a>
+          <a href="#about" class="navContent" id ="navItem3">Contact</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+   </div>
+
+    <div class="profilePic">
+
+
+
+
+
+      <img src="images/icon.png" alt="profile icon" class ="pic">
+      <div class = "myInfo">
+        <h1> Game Designer</h1>
+      </div>
+    </div>
+
+    <div class ="theWordProjects" id ="startchange">
+            <h2> projects </h2>
+    </div>
+
+    <div class ="projectContainer">
+
+      <div class="container">
+         <a href="#" >
+              <img src="images/revengening.png" alt="profile icon" class ="pp" id ="revenge"
+              onmouseover="onHoverRevenge()" onmouseout="offHoverRevenge()">
+        </a>
+
+        <h2 class ="pieceTitle"> Revengening </h2>
+      </div>
+
+      <div class="container">
+        <a href="#" >
+          <img src="images/Mauefall.PNG" alt="profile icon" class ="pp" id ="Mauerfall"
+          onmouseover="onHoverMauefall()" onmouseout="offHoverMauefall()">
+        </a>
+        <h2 class ="pieceTitle">Mauefall </h2>
+      </div>
+
+      <div class="container">
+          <a href="#" >
+            <img src="images/TheRoyalTuna.png" alt="profile icon" class ="pp" id ="Tuna"
+              onmouseover="onHoverTuna()" onmouseout="offHoverTuna()">
+          </a>
+        <h2 class ="pieceTitle"> The Royal Tuna </h2>
+      </div>
+    </div>
+
+    <div class = "VR">
+
+    </div>
+
+
+    <script>
+      function myFunction() {
+          var x = document.getElementById("insideTopNav");
+          if (x.className === "floatRight") { x.className += " responsive"; }
+          else { x.className = "floatRight";  }
+      }
+      function onHoverRevenge()    {
+          $("#revenge").attr('src', 'images/revengeningHover.png');
+      }
+      function offHoverRevenge()    {
+          $("#revenge").attr('src', 'images/revengening.png');
+      }
+      function onHoverMauefall()    {
+          $("#Mauerfall").attr('src', 'images/MauefallHover.png');
+      }
+      function offHoverMauefall()    {
+          $("#Mauerfall").attr('src', 'images/Mauefall.png');
+      }
+      function onHoverTuna()    {
+          $("#Tuna").attr('src', 'images/TheRoyalTunaHover.png');
+      }
+      function offHoverTuna()    {
+          $("#Tuna").attr('src', 'images/TheRoyalTuna.png');
+      }
+  </script>
+
+  <script>
+  $(document).ready(function(){
+   var scroll_start = 0;
+   var startchange = $('#startchange');
+   var offset = startchange.offset();
+   $(document).scroll(function() {
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $('#myTopnav').css('background-color', '#fff');
+          $('#navItem1').css('color', '#000');
+          $('#navItem2').css('color', '#000');
+          $('#navItem3').css('color', '#000');
+          $('#name').css('display', 'none');
+       }
+       else {
+          $('#myTopnav').css('background-color', 'transparent');
+          $('#navItem1').css('color', '#fff');
+          $('#navItem2').css('color', '#fff');
+          $('#navItem3').css('color', '#fff');
+            $('#name').css('display', 'block');
+       }
+   });
+});
+  </script>
+
+
+
+  </body>
+
+
+
+</html>

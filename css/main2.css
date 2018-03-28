@@ -5,31 +5,24 @@ html, body{
 body{
   margin: 0;
 }
-
+/* -----different fonts for the page------*/
 @font-face {
     font-family: Atarian;
     src: url('../fonts/Atarian/SF Atarian System Bold.ttf');
     font-weight: bold;
 }
 
-
 @font-face {
     font-family: AtarianR;
     src: url('../fonts/Atarian/SF Atarian System.ttf');
 }
 
-h1{
-  font-family: Atarian;
-  font-size: 5rem;
-
-  color: #384ea2;
-}
-
+/*------ The navigation bar ------*/
 .topnav {
   overflow: hidden;
-  /*background-color: #3c3c3c;*/
   padding:  1rem;
   font-family: AtarianR;
+  /*position: fixed;*/
 }
 
 .navContent {
@@ -58,15 +51,12 @@ h1{
   font-size: 17px;
 }
 
-
-
 .topnav a:hover {
-
   color: #c6c6c6;
 }
 
 .active {
-  background-color: none;
+  background: none;
   color: white;
 }
 
@@ -96,15 +86,17 @@ h1{
   }
 }
 
+/*------ Game Designer Title,  picture and background------*/
+h1{
+  font-family: Atarian;
+  font-size: 5rem;
+  color: #384ea2;
+}
 @media screen and (max-width: 600px) {
   h1{
     font-size: 3rem;
   }
 }
-
-
-
-
 .pic{
   max-height: 25%;
   min-height: 300px;
@@ -131,40 +123,49 @@ h1{
     margin: auto;
 }
 
+
+/*------ The the word "project" ------*/
 .theWordProjects{
   padding: 1rem;
   padding-left: 2rem;
-    font-family: AtarianR;
+  font-family: AtarianR;
 }
+
+/*------ My projects ------*/
 
 .projectContainer{
   display: flex;
-  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 1rem;
-  flex-grow: 0;
-  flex-basis: auto;
-
 }
 
+/*------ sets min/max width for container ------*/
 .container{
-
-
+  flex-grow: 1  ;
+  flex-basis: auto;
+  max-width: 545px;
+  max-height: 371.2px;
+  min-width: 545px;
+  min-height: 371.2px;
 }
 
+/*------ sets min/max width for picture ------*/
 .pp{
   max-height: 30%;
-  min-height: 300px;
   max-width: 30%;
+  min-height: 300px;
   min-width: 500px;
-  align-self: center;
-
 }
+
+/*------ The name for my pieces ------*/
 .pieceTitle{
-  align-items: center;
+  text-align: center;
   align-self: center;
   align-content: center;
   margin: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -172,3 +173,24 @@ h1{
     flex-direction: column;
   }
 }
+@media screen and (max-width: 540px) {
+  .pp{
+    max-height: 30%;
+    max-width: 30%;
+    min-height: 200px;
+    min-width: 400px;
+  }
+  .container{
+    flex-grow: 1  ;
+    flex-basis: auto;
+    max-width: 400px;
+    max-height: 224px;
+    min-width: 400px;
+    min-height: 224px;
+  }
+  .pieceTitle{
+    display: none;
+  }
+}
+
+/*------ VR parallex scrolling ------*/
