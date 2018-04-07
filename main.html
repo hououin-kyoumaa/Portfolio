@@ -1,44 +1,267 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Hi</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/main.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
   </head>
   <body >
 
-   <div class="navMenu" id ="myNavMenu">
-      <ul>
-        <li class ="navContent"><a href="#projects">Contact</a></li>
-        <li class ="navContent"><a href="#about">About</a></li>
-        <li class ="navContent"><a href="#contact">Projects</a></li>
-        <li><a class="active" href="#about">Harkeerat Chhina</a></li>
-    </ul>
-  </div>
+    <div class="topnav" id ="myTopnav">
+        <div class ="floatRight" id = "insideTopNav">
+          <a href="#home" class="active" id ="name" onclick="undoMoveLeft();">Harkeerat Chhina</a>
+          <a href="#about" class="navContent"id ="navItem1" onclick="undoMoveLeft();">Contact</a>
+          <a href="#about" class="navContent" id ="navItem2" onclick="undoMoveLeft();">About</a>
+          <a href="#myProjects" class="navContent" id ="navItem3" onclick="undoMoveLeft();">Projects</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+   </div>
 
     <div class="profilePic">
-
       <img src="images/icon.png" alt="profile icon" class ="pic">
-
-
-
       <div class = "myInfo">
-        <p> hi My name is harkeerat .....</p>
-
+        <h1> Game Designer</h1>
       </div>
     </div>
 
+    <div class ="theWordProjects" id ="startchange">
+            <h2 id="myProjects"> projects </h2>
+    </div>
+
+    <div class ="projectContainer">
+
+      <div class="container">
+         <a href="Revengening.html" >
+              <img src="images/revengening.png" alt="profile icon" class ="pp" id ="revenge"
+              onmouseover="onHoverRevenge()" onmouseout="offHoverRevenge()">
+        </a>
+
+        <h2 class ="pieceTitle"> Revengening </h2>
+      </div>
+
+      <div class="container">
+        <a href="mauerfall.html" >
+          <img src="images/Mauefall.PNG" alt="profile icon" class ="pp" id ="Mauerfall"
+          onmouseover="onHoverMauefall()" onmouseout="offHoverMauefall()">
+        </a>
+        <h2 class ="pieceTitle">Mauefall </h2>
+      </div>
+
+      <div class="container">
+          <a href="#" >
+            <img src="images/TheRoyalTuna.png" alt="profile icon" class ="pp" id ="Tuna"
+              onmouseover="onHoverTuna()" onmouseout="offHoverTuna()">
+          </a>
+        <h2 class ="pieceTitle"> The Royal Tuna </h2>
+      </div>
+    </div>
+
+    <div class = "VR">
+
+
+    </div>
+
+    <div class ="projectContent padding-top">
+      <div class="contentContainerAvgIng contentContainerSame">
+          <img src ="images/profile.png" class = "profileImg" id="about">
+      </div>
+      <div class="contentContainer contentContainerSame">
+            <p class ="context"> I am a third-year Interactive arts and technology student at Simon Fraser University.
+               My area of research includes issues revolving around games. Particularly I want to discern to what extent
+                we should trust social realistic games such as America's Army as a viable knowledge medium. Data storage
+                 capacity is constantly expanding.  Going from 4.4 MB in 1957 to and easily surpassing three terabytes in
+                  recent years (Computers & the Internet, n.d). With the increasing data capabilities, is it reliable to
+                  trust in increasing realistic games? As a game developer, I think it is important to understand the issues
+                  surrounding games and the potential implications of the games we create. My research seeks to understand
+                  the reliability of America's Army as an accurate depiction of warfare.
+            </p>
+      </div>
+    </div>
+
+    <div class="footer">
+           <div class="topFooter">
+              <img src="images/fb2.png" class="socialMediaImg">
+              <img src="images/t2.png" class="socialMediaImg">
+              <img src="images/i3.png" class="socialMediaImg">
+              <img src="images/e2.png" class="socialMediaImg">
+               <p class ="footerTextA"> Simon Fraser University  250-13450 102 Ave, Surrey, BC V3T 0A3 </p>
+           </div>
+          <p class ="footerTextB"> &copy; Copyright. All Rights Reserved   |  <a href="url" class ="footerLinks">references </a>
+          | <a href="url" class ="footerLinks">style guide </a>  | <a href="https://github.com/IAT339/P02" class ="footerLinks">github </a> </p>
+    </div>
+
+
+
+    <script>
+      var shurnk = false;
+      var leftMoved = false;
+
+      function myFunction() {
+         // adds a class called responsive to the div with the id insideTopNav
+          var x = document.getElementById("insideTopNav");
+          if (x.className === "floatRight") {
+            x.className += " responsive";
+            $('body').toggleClass('moveLeft');
+            $('.topnav').toggleClass('moveRight');
+            $('#navItem1').css('color', '#000');
+            $('#navItem2').css('color', '#000');
+            $('#navItem3').css('color', '#000');
+            $('#name').css('display', 'none');
+            $('.icon').css('color', 'black');
+            $('html, body').animate({ scrollTop: 0 }, 'fast');
+
+            leftMoved = true;
+            console.log(leftMoved);
+            shurnk = !shurnk;
+          }
+          else {
+            // undos adding the new responsive class
+            x.className = "floatRight";
+            $('body').toggleClass('moveLeft');
+            $('.topnav').toggleClass('moveRight');
+            $('#navItem1').css('color', '#fff');
+            $('#navItem2').css('color', '#fff');
+            $('#navItem3').css('color', '#fff');
+            $('#name').css('display', 'block');
+              $('.icon').css('color', 'white');
+            leftMoved = false;
+            shurnk = !shurnk;
+          }
+      }
+
+      // changes picture on hover
+      function onHoverRevenge()    {         $("#revenge").attr('src', 'images/revengeningHover.png');     }
+      function offHoverRevenge()   {         $("#revenge").attr('src', 'images/revengening.png');          }
+      function onHoverMauefall()   {         $("#Mauerfall").attr('src', 'images/MauefallHover.png');      }
+      function offHoverMauefall()  {         $("#Mauerfall").attr('src', 'images/Mauefall.png');           }
+      function onHoverTuna()       {         $("#Tuna").attr('src', 'images/TheRoyalTunaHover.png');       }
+      function offHoverTuna()      {         $("#Tuna").attr('src', 'images/TheRoyalTuna.png');            }
+
+      // removes the body shifting left. Return body to original position
+      function undoMoveLeft(){
+        console.log(leftMoved);
+        if(leftMoved){
+          console.log("content is shifted left ");
+          $('body').removeClass('moveLeft');
+          $('.topnav').removeClass('moveRight');
+          myFunction();
+          $('body').removeClass('moveLeft');
+          $('.topnav').removeClass('moveRight');
+          leftMoved = false;
+        }
+        else{
+          $('body').removeClass('moveLeft');
+          $('.topnav').removeClass('moveRight');
+
+        }
+      }
+
+      $(document).ready(function() {
+            // stores the screen in a variable
+            var $window = $(window);
+
+            function checkWidth() {
+                var windowsize = $window.width();
+                if (windowsize > 500) {
+                    $('#navItem1').css('color', '#fff');
+                    $('#navItem2').css('color', '#fff');
+                    $('#navItem3').css('color', '#fff');
+                    $('.icon').css('color', 'white');
+                      //if the window is greater than 500px and the body has be shifted
+                    if(leftMoved){
+                      console.log("content is shifted left ");
+                      // remove the shift
+                      $('body').removeClass('moveLeft');
+                      $('.topnav').removeClass('moveRight');
+                      // apply my function to hide the hamburger icon
+                      // this also applies the shift again
+                      myFunction();
+                      // undo the shift applied by my function
+                      $('body').removeClass('moveLeft');
+                      $('.topnav').removeClass('moveRight');
+                      // change boolean
+                      leftMoved = false;
+                    }
+                      //if the window is greater than 500px and te body has NOT be shifted
+                    else{
+                      $('body').removeClass('moveLeft');
+                      $('.topnav').removeClass('moveRight');
+                    }
+                }
+                // if window is not greater than 600px
+                else{
+                  $('#navItem1').css('color', '#000');
+                  $('#navItem2').css('color', '#000');
+                  $('#navItem3').css('color', '#000');
+                }
+              }
+              // Execute on load
+              checkWidth();
+              // Bind event listener
+              $(window).resize(checkWidth);
+      });
+
+      $(document).ready(function(){
+           var scroll_start = 0;
+           //start change define where the color of the element should change
+           var startchange = $('#startchange');
+           var offset = startchange.offset();
+           var $window = $(window);
+           $(document).scroll(function() {
+             var windowsize2 = $window.width();
+              scroll_start = $(this).scrollTop();
+              // if scrolling goes past the offset value
+              if(scroll_start > offset.top) {
+                  // if past offset and less than 600px
+                  if(windowsize2 < 600){
+                    $('#myTopnav').css('background-color', 'white');
+                    $('#navItem1').css('color', 'black');
+                    $('#navItem2').css('color', 'black');
+                    $('#navItem3').css('color', 'black');
+                    $('#name').css('display', 'none');
+                     $('.icon').css('color', 'black');
+                  }
+                  // if past offset
+                  else{
+                      $('#myTopnav').css('background-color', 'white');
+                      $('#navItem1').css('color', 'black');
+                      $('#navItem2').css('color', 'black');
+                      $('#navItem3').css('color', 'black');
+                      $('#name').css('display', 'none');
+                      $('.icon').css('color', 'black');
+                  }
+               }
+               // if its not past offset
+               else {
+                 // if not past offset and body has been shifted
+                 if(leftMoved){
+                    $('#myTopnav').css('background-color', 'transparent');
+                    $('#navItem1').css('color', 'black');
+                    $('#navItem2').css('color', 'black');
+                    $('#navItem3').css('color', 'black');
+                    $('#name').css('display', 'none');
+                    $('.icon').css('color', 'black');
+                 }
+                 // if not past offset and body has NOT been shifted
+                 else{
+                   $('.icon').css('color', 'white');
+                   $('#myTopnav').css('background-color', 'transparent');
+                   $('#navItem1').css('color', 'white');
+                   $('#navItem2').css('color', 'white');
+                   $('#navItem3').css('color', 'white');
+                     $('#name').css('display', 'block');
+                 }
+               }
+           });
+      });
+  </script>
 
   </body>
 
 
-  <script>
-    function myFunction() {
-        var x = document.getElementById("myNavMenu");
-        if (x.className === "navMenu") { x.className += " responsive"; }
-        else { x.className = "topnav";  }
-    }
-</script>
 
 </html>

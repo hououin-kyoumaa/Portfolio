@@ -5,17 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/mauerfall.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 
   </head>
   <body >
 
     <div class="topnav" id ="myTopnav">
         <div class ="floatRight" id = "insideTopNav">
-          <a href="main3.html" class="active" id ="name">Harkeerat Chhina</a>
-          <a href="main3.html#about" class="navContent" id ="navItem1">Contact</a>
-          <a href="#main3.html#about" class="navContent" id ="navItem2">About</a>
-          <a href="main3.html#myProjects" class="navContent" id ="navItem3">Projects</a>
+          <a href="#home" class="active" id ="name" onclick="undoMoveLeft();">Harkeerat Chhina</a>
+          <a href="#about" class="navContent"id ="navItem1" onclick="undoMoveLeft();">Contact</a>
+          <a href="#about" class="navContent" id ="navItem2" onclick="undoMoveLeft();">About</a>
+          <a href="#myProjects" class="navContent" id ="navItem3" onclick="undoMoveLeft();">Projects</a>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
         </div>
    </div>
@@ -209,36 +210,161 @@
         </div>
 
 
-    <script>
-      function myFunction() {
-          var x = document.getElementById("insideTopNav");
-          if (x.className === "floatRight") { x.className += " responsive"; }
-          else { x.className = "floatRight";  }
-      }
+        <script>
+          var shurnk = false;
+          var leftMoved = false;
 
-      $(document).ready(function(){
-       var scroll_start = 0;
-       var startchange = $('#startchange');
-       var offset = startchange.offset();
-       $(document).scroll(function() {
-          scroll_start = $(this).scrollTop();
-          if(scroll_start > offset.top) {
-              $('#myTopnav').css('background-color', '#fff');
-              $('#navItem1').css('color', '#000');
-              $('#navItem2').css('color', '#000');
-              $('#navItem3').css('color', '#000');
-              $('#name').css('display', 'none');
-           }
-           else {
-              $('#myTopnav').css('background-color', 'transparent');
-              $('#navItem1').css('color', '#fff');
-              $('#navItem2').css('color', '#fff');
-              $('#navItem3').css('color', '#fff');
+          function myFunction() {
+             // adds a class called responsive to the div with the id insideTopNav
+              var x = document.getElementById("insideTopNav");
+              if (x.className === "floatRight") {
+                x.className += " responsive";
+                $('body').toggleClass('moveLeft');
+                $('.topnav').toggleClass('moveRight');
+                $('#navItem1').css('color', 'black');
+                $('#navItem2').css('color', 'black');
+                $('#navItem3').css('color', 'black');
+                $('#name').css('display', 'none');
+                $('.icon').css('color', 'black');
+                $('html, body').animate({ scrollTop: 0 }, 'fast');
+
+                leftMoved = true;
+                console.log(leftMoved);
+                shurnk = !shurnk;
+              }
+              else {
+                // undos adding the new responsive class
+                x.className = "floatRight";
+                $('body').toggleClass('moveLeft');
+                $('.topnav').toggleClass('moveRight');
+                $('#navItem1').css('color', '#fff');
+                $('#navItem2').css('color', '#fff');
+                $('#navItem3').css('color', '#fff');
                 $('#name').css('display', 'block');
-           }
-       });
-    });
-    </script>
+                  $('.icon').css('color', 'white');
+                leftMoved = false;
+                shurnk = !shurnk;
+              }
+          }
+
+          // removes the body shifting left. Return body to original position
+          function undoMoveLeft(){
+            console.log(leftMoved);
+            if(leftMoved){
+              console.log("content is shifted left ");
+              $('body').removeClass('moveLeft');
+              $('.topnav').removeClass('moveRight');
+              myFunction();
+              $('body').removeClass('moveLeft');
+              $('.topnav').removeClass('moveRight');
+              leftMoved = false;
+            }
+            else{
+              $('body').removeClass('moveLeft');
+              $('.topnav').removeClass('moveRight');
+
+            }
+          }
+
+          $(document).ready(function() {
+                // stores the screen in a variable
+                var $window = $(window);
+
+                function checkWidth() {
+                    var windowsize = $window.width();
+                    if (windowsize > 500) {
+                        $('#navItem1').css('color', '#fff');
+                        $('#navItem2').css('color', '#fff');
+                        $('#navItem3').css('color', '#fff');
+                        $('.icon').css('color', 'white');
+                          //if the window is greater than 500px and the body has be shifted
+                        if(leftMoved){
+                          console.log("content is shifted left ");
+                          // remove the shift
+                          $('body').removeClass('moveLeft');
+                          $('.topnav').removeClass('moveRight');
+                          // apply my function to hide the hamburger icon
+                          // this also applies the shift again
+                          myFunction();
+                          // undo the shift applied by my function
+                          $('body').removeClass('moveLeft');
+                          $('.topnav').removeClass('moveRight');
+                          // change boolean
+                          leftMoved = false;
+                        }
+                          //if the window is greater than 500px and te body has NOT be shifted
+                        else{
+                          $('body').removeClass('moveLeft');
+                          $('.topnav').removeClass('moveRight');
+                        }
+                    }
+                    // if window is not greater than 600px
+                    else{
+                      $('#navItem1').css('color', '#000');
+                      $('#navItem2').css('color', '#000');
+                      $('#navItem3').css('color', '#000');
+                    }
+                  }
+                  // Execute on load
+                  checkWidth();
+                  // Bind event listener
+                  $(window).resize(checkWidth);
+          });
+
+          $(document).ready(function(){
+               var scroll_start = 0;
+               //start change define where the color of the element should change
+               var startchange = $('.projectContent');
+               var offset = startchange.offset();
+               var $window = $(window);
+               $(document).scroll(function() {
+                 var windowsize2 = $window.width();
+                  scroll_start = $(this).scrollTop();
+                  // if scrolling goes past the offset value
+                  if(scroll_start > offset.top) {
+                      // if past offset and less than 600px
+                      if(windowsize2 < 600){
+                        $('#myTopnav').css('background-color', 'white');
+                        $('#navItem1').css('color', 'black');
+                        $('#navItem2').css('color', 'black');
+                        $('#navItem3').css('color', 'black');
+                        $('#name').css('display', 'none');
+                         $('.icon').css('color', 'black');
+                      }
+                      // if past offset
+                      else{
+                          $('#myTopnav').css('background-color', 'white');
+                          $('#navItem1').css('color', 'black');
+                          $('#navItem2').css('color', 'black');
+                          $('#navItem3').css('color', 'black');
+                          $('#name').css('display', 'none');
+                          $('.icon').css('color', 'black');
+                      }
+                   }
+                   // if its not past offset
+                   else {
+                     // if not past offset and body has been shifted
+                     if(leftMoved){
+                        $('#myTopnav').css('background-color', 'transparent');
+                        $('#navItem1').css('color', 'black');
+                        $('#navItem2').css('color', 'black');
+                        $('#navItem3').css('color', 'black');
+                        $('#name').css('display', 'none');
+                        $('.icon').css('color', 'black');
+                     }
+                     // if not past offset and body has NOT been shifted
+                     else{
+                       $('.icon').css('color', 'white');
+                       $('#myTopnav').css('background-color', 'transparent');
+                       $('#navItem1').css('color', 'white');
+                       $('#navItem2').css('color', 'white');
+                       $('#navItem3').css('color', 'white');
+                         $('#name').css('display', 'block');
+                     }
+                   }
+               });
+          });
+      </script>
 
 
   </body>

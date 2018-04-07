@@ -4,8 +4,6 @@ html, body{
 }
 body{
   margin: 0;
-  background-color: #212020;
-  color: white;
 }
 /* -----different fonts for the page------*/
 @font-face {
@@ -54,6 +52,8 @@ body{
   padding: 0;
   padding-right: 1rem;
   margin: 0;
+  color: white;
+
 }
 
 .navContent {
@@ -83,28 +83,35 @@ body{
 }
 
 .floatRight a:hover {
-  color: #c6c6c6;
+  color: blue;
 }
-
 .active {
   background: none;
   color: white;
 }
-
 .floatRight .icon {
   display: none;
 }
+.moveLeft{
+  position: absolute;
+  right: 25%;
+  margin-right:50%;
+}
+.moveRight{
+  position: absolute;
+  left: 25%;
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .floatRight a:not(:first-child) {display: none;}
   .floatRight a.icon {
     float: right;
     display: block;
   }
-}
-
-@media screen and (max-width: 600px) {
-  .floatRight.responsive {position: relative;}
+  .floatRight.responsive {
+    position: relative;
+    margin-left: auto;
+  }
   .floatRight.responsive .icon {
     position: absolute;
     right: 0;
@@ -113,7 +120,7 @@ body{
   .floatRight.responsive a {
     float: none;
     display: block;
-    text-align: left;
+    text-align: right;
   }
 }
 
@@ -216,7 +223,7 @@ body{
   min-width: 400px;
   max-width: 1200px;
   min-height: 200px;
-  max-height: 800px;
+  max-height: 1000px;
 }
 
 .contentContainerAvgIng{
@@ -315,8 +322,6 @@ ul{
 .playtestImg{
   min-width: 400px;
   min-height: 400px;
-
-
 }
 
 .footer {

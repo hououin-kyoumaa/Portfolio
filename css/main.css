@@ -5,75 +5,340 @@ html, body{
 body{
   margin: 0;
 }
-
-
-html{
-
-    background: url('../images/background4.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+/* -----different fonts for the page------*/
+@font-face {
+    font-family: Atarian;
+    src: url('../fonts/Atarian/SF Atarian System Bold.ttf');
+    font-weight: bold;
 }
 
-.navMenu{
-  padding: 1rem;
-  overflow: hidden;
-  background-color: #3c3c3c;
-
+@font-face {
+    font-family: AtarianR;
+    src: url('../fonts/Atarian/SF Atarian System.ttf');
+}
+@font-face {
+    font-family: raleway;
+    src: url('../fonts/raleway/Raleway-Medium.ttf');
 }
 
-.navContent{
+/*------ The navigation bar ------*/
+.topnav {
+  overflow: hidden  ;
+  padding:  1rem;
+  padding-bottom: 0;
+  font-family: AtarianR;
+  position: fixed;
+  width: 100%;
+}
+
+.floatRight{
+  padding: 0;
+  padding-right: 1rem;
+  margin: 0;
+  color: white;
+}
+
+.navContent {
   float: right;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: #384ea2;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
 }
 
 .active {
-    background-color: #384ea2;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
 }
 
+.icon{
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.floatRight a:hover {
+  color: blue;
+}
+.active {
+  background: none;
+  color: white;
+}
+.floatRight .icon {
+  display: none;
+}
+.moveLeft{
+  position: absolute;
+  right: 25%;
+  margin-right: 50%;
+}
+.moveRight{
+  position: absolute;
+  left: 25%;
+}
+
+@media screen and (max-width: 500px) {
+  .floatRight a:not(:first-child) {display: none;}
+  .floatRight a.icon {
+    float: right;
+    display: block;
+  }
+  .floatRight.responsive {
+    position: relative;
+    margin-left: auto;
+  }
+  .floatRight.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .floatRight.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 600px) {
+/*  .icon{
+    color:white;
+  }*/
+
+
+}
+
+/*------ Game Designer Title,  picture and background------*/
+h1{
+  font-family: Atarian;
+  font-size: 5rem;
+  color: #384ea2;
+}
+@media screen and (max-width: 500px) {
+  h1{
+    font-size: 3rem;
+  }
+}
 .pic{
   max-height: 25%;
   min-height: 300px;
   max-width: 25%;
   min-width: 300px;
     margin: auto;
+    padding-top: 4.5rem;
 }
-
 .profilePic{
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: auto;
+  background: url('../images/background5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .myInfo{
     margin: auto;
+}
 
 
+/*------ The the word "project" ------*/
+.theWordProjects{
+  padding: 1rem;
+  padding-left: 2rem;
+  font-family: AtarianR;
+}
+
+/*------ My projects ------*/
+
+.projectContainer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+/*------ sets min/max width for container ------*/
+.container{
+  flex-grow: 1  ;
+  flex-basis: auto;
+  max-width: 545px;
+  max-height: 371.2px;
+  min-width: 545px;
+  min-height: 371.2px;
+}
+
+/*------ sets min/max width for picture ------*/
+.pp{
+  max-height: 30%;
+  max-width: 30%;
+  min-height: 300px;
+  min-width: 500px;
+}
+
+/*------ The name for my pieces ------*/
+.pieceTitle{
+  text-align: center;
+  align-self: center;
+  align-content: center;
+  margin: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .projectContainer{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 540px) {
+  .pp{
+    max-height: 30%;
+    max-width: 30%;
+    min-height: 200px;
+    min-width: 400px;
+  }
+  .container{
+    flex-grow: 1  ;
+    flex-basis: auto;
+    max-width: 400px;
+    max-height: 224px;
+    min-width: 400px;
+    min-height: 224px;
+  }
+  .pieceTitle{
+    display: none;
+  }
+}
+
+/*------ VR parallex scrolling ------*/
+
+.VR{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  background: url('../images/oculus.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+  width: 100%;
+  height: 60%;
+
+}
+
+/*-----------Profile---------------*/
+
+.padding-top{
+  padding-top: 100px;
+}
+.contentContainerSame{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin:  20px;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+
+.projectContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contentContainer{
+  min-width: 300px;
+  max-width: 530px;
+  min-height: 300px;
+  max-height: 500px;
+}
+
+.contentContainerAvgIng{
+  min-width: 300px;
+  max-width: 400px;
+  min-height: 300px;
+  max-height: 400px;
+}
+
+.profileImg{
+  min-width: 300px;
+  min-height: 300px;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.context{
+  max-width: 500px;
+  font-family: raleway;
+  line-height: 1.6;
+}
+
+/*-----------footer--------------*/
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  background-color: #000;
+  text-align: center;
+  min-height: 100px;
+  margin-top:  100px;
+}
+
+.footerTextA {
+  color: white;
+}
+
+.footerTextB {
+  color: white;
+  font-size: 0.7rem;
+}
+
+.footerLinks{
+  color: white;
+  text-decoration: none;
+}
+
+.footerLinks:link{
+  color: white;
+  text-decoration: none;
+}
+
+.footerLinks:visited{
+  color: white;
+  text-decoration: none;
+}
+
+.footerLinks:hover{
+  text-decoration: underline;
+}
+
+.footerLinks:active{
+  color: green;
+}
+
+.socialMediaImg{
+  display: inline-block;
+  max-width: 40px;
+  min-width: 40px;
+  max-height: 40px;
+  min-height: 40px;
 }
