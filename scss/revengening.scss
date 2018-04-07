@@ -50,9 +50,7 @@ body{
 }
 #projectContentPadding{
   padding-left: 0px;
-
 }
-
 .contentContainer{
   display: flex;
   justify-content: center;
@@ -61,7 +59,7 @@ body{
   margin:  20px;
   min-width: 300px;
   max-width: 530px;
-  min-height: 300px;
+  min-height: 100px;
   max-height: 400px;
   flex-grow: 1;
   flex-basis: auto;
@@ -76,7 +74,7 @@ body{
   min-width: 300px;
   max-width: 530px;
   min-height: 300px;
-  max-height: 550px;
+  max-height: 800px;
   flex-grow: 1;
   flex-basis: auto;
 }
@@ -84,22 +82,9 @@ body{
 .kongtext{
   font-family: kongtext;
 }
-
-@media screen and (max-width: 600px) {
-  .projectContent{
-    flex-direction: column;
-  }
-  .contentContainer{
-    min-width: 300px;
-    flex-direction: column;
-  }
-  #projectContentPadding{
-    padding-left: 20px;
-  }
-}
-
 .context{
   max-width: 500px;
+  max-height: 1000px;
 }
 #padding-top{
   padding-top: 30px;
@@ -115,4 +100,23 @@ p{
   max-width: 618px;
   max-height: 400px;
   padding-top: 0.5rem;
+}
+
+
+@media screen and (max-width: 550px) {
+  .projectContent{
+    flex-direction: column;
+  }
+  .contentContainer{
+    min-width: 300px;
+    flex-direction: column;
+  }
+  #projectContentPadding{
+    padding-left: 20px;
+  }
+  .kidnapImg{
+    max-width: 400px;
+    max-height: 400px;
+    padding-top: 0.5rem;
+  }
 }

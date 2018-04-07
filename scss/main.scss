@@ -84,11 +84,13 @@ h1{
   padding-bottom: 2rem;
 }
 
-@media screen and (max-width: 500px) {
+/*@media screen and (max-width: 500px) {
   .projectContainer{
     flex-direction: column;
   }
-}
+}*/
+
+
 @media screen and (max-width: 540px) {
   .pp{
     max-height: 30%;
@@ -107,6 +109,26 @@ h1{
   .pieceTitle{
     display: none;
   }
+}
+
+@media screen and (max-width: 420px) {
+
+  .pp{
+    max-height: 168px;
+    max-width: 300px;
+    min-height: 168px;
+    min-width: 300px;
+  }
+
+  .container{
+    flex-grow: 1  ;
+    flex-basis: auto;
+    max-width: 300px;
+    max-height: 168px;
+    min-width: 300px;
+    min-height: 168px;
+  }
+
 }
 
 /*------ VR parallex scrolling ------*/
@@ -166,6 +188,16 @@ h1{
   min-height: 300px;
   max-width: 400px;
   max-height: 400px;
+}
+
+@media screen and (max-width: 450px){
+  .profileImg{
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
 }
 
 .context{
