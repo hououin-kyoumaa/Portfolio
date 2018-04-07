@@ -1,0 +1,30 @@
+/* -----different fonts for the page------*/
+@font-face {
+    font-family: Atarian;
+    src: url('../fonts/Atarian/SF Atarian System Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: AtarianR;
+    src: url('../fonts/Atarian/SF Atarian System.ttf');
+}
+@font-face {
+    font-family: raleway;
+    src: url('../fonts/raleway/Raleway-Medium.ttf');
+}
+
+@font-face {
+    font-family: kongtext;
+    src: url('../fonts/kongtext/kongtext.ttf');
+}
+
+@font-face {
+    font-family: PostScriptum;
+    src: url('../fonts/post_scriptum/PostScriptum Light.ttf');
+}
+
+@font-face {
+    font-family: ralewayBold;
+    src: url('../fonts/raleway/Raleway-ExtraBold.ttf');
+}

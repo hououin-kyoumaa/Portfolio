@@ -1,0 +1,118 @@
+html, body{
+  height: 100%;
+}
+body{
+  margin: 0;
+}
+
+.profilePic{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  background: url('../images/revengening.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.oculus{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  background: url('../images/oculus.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.myInfo{
+    margin: auto;
+}
+
+.projectContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+/*  width: 100%;
+  margin: auto;*/
+
+}
+#projectContentPadding{
+  padding-left: 0px;
+
+}
+
+.contentContainer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin:  20px;
+  min-width: 300px;
+  max-width: 530px;
+  min-height: 300px;
+  max-height: 400px;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+.contentContainerLong{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  flex-direction: column;
+  margin:  20px;
+  min-width: 300px;
+  max-width: 530px;
+  min-height: 300px;
+  max-height: 550px;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+
+.kongtext{
+  font-family: kongtext;
+}
+
+@media screen and (max-width: 600px) {
+  .projectContent{
+    flex-direction: column;
+  }
+  .contentContainer{
+    min-width: 300px;
+    flex-direction: column;
+  }
+  #projectContentPadding{
+    padding-left: 20px;
+  }
+}
+
+.context{
+  max-width: 500px;
+}
+#padding-top{
+  padding-top: 30px;
+}
+
+p{
+  -webkit-margin-before: 0.5em;
+  -webkit-margin-after: 0.5em;
+    font-family: arial, raleway;
+}
+
+.kidnapImg{
+  max-width: 618px;
+  max-height: 400px;
+  padding-top: 0.5rem;
+}

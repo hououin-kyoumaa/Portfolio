@@ -1,0 +1,196 @@
+html, body{
+  height: 100%;
+}
+body{
+  margin: 0;
+}
+
+.profilePic{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  background: url('../images/mauerfall.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.myInfo{
+    margin: auto;
+}
+
+.padding-top{
+  padding-top: 100px;
+
+}
+
+.projectContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#projectContentPadding{
+    padding-left: 0px;
+}
+
+.contentContainerSame{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin:  20px;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+
+.contentContainerSameCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin:  20px;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+
+.contentContainer{
+  min-width: 300px;
+  max-width: 530px;
+  min-height: 300px;
+  max-height: 500px;
+}
+
+.contentContainerSolo{
+  min-width: 600px;
+  max-width: 1200px;
+  min-height: 600px;
+  max-height: 800px;
+}
+
+.contentContainerVertical{
+  min-width: 300px;
+  max-width: 400px;
+  min-height: 450px;
+  max-height: 600px;
+}
+
+.contentContainerHorizontal{
+  min-width: 450px;
+  max-width: 600px;
+  min-height: 300px;
+  max-height: 400px;
+}
+
+.contentContainerLong{
+  min-width: 300px;
+  max-width: 530px;
+  min-height: 300px;
+  max-height: 550px;
+}
+
+.contentContainerTexySolo{
+  min-width: 400px;
+  max-width: 1200px;
+  min-height: 200px;
+  max-height: 1000px;
+}
+
+.contentContainerAvgIng{
+  min-width: 450px;
+  max-width: 675px;
+  min-height: 400px;
+  max-height: 600px;
+
+}
+
+.kongtext{
+  font-family: PostScriptum;
+}
+
+@media screen and (max-width: 600px) {
+  .projectContent{
+    flex-direction: column;
+  }
+  .contentContainer{
+    min-width: 300px;
+    flex-direction: column;
+  }
+  #projectContentPadding{
+    padding-left: 20px;
+
+  }
+}
+
+.context{
+  max-width: 500px;
+}
+.contextSolo{
+  max-width: 1200px;
+}
+#padding-top{
+  padding-top: 30px;
+}
+
+p{
+  -webkit-margin-before: 0.5em;
+  -webkit-margin-after: 0.5em;
+  font-family: raleway;
+   line-height: 1.6;
+}
+
+ol{
+  font-family: ralewayBold;
+}
+ul{
+  font-family: raleway;
+}
+
+.kidnapImg{
+  max-width: 800px;
+  max-height: 400px;
+  padding-top: 0.5rem;
+}
+.coreloopImg{
+  min-width: 450px;
+  min-height: 400px;
+  max-width: 670px;
+  max-height: 600px;
+}
+.mechanicsImg{
+  min-width: 530px;
+  min-height: 400px;
+  max-width: 745px;
+  max-height: 600px;
+}
+.overviewImg{
+  min-width: 300px;
+  min-height: 450px;
+  max-width: 400px;
+  max-height: 600px;
+  padding-top: 0.5rem;
+}
+.narrativeImg{
+  min-width: 450px;
+  min-height: 300px;
+  max-width: 600px;
+  max-height: 400px;
+  padding-top: 0.5rem;
+}
+.narrativeFlowboardImg{
+  min-width: 600px;
+  max-width: 1200px;
+  min-height: 600px;
+  max-height: 800px;
+  padding-top: 0.5rem;
+}
+.playtestImg{
+  min-width: 400px;
+  min-height: 400px;
+}
