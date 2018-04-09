@@ -99,6 +99,23 @@ p{
   padding-top: 0.5rem;
 }
 
+@media screen and (max-width: 415px) {
+  .contentContainerLong{
+    min-width: 300px;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contentContainerLong{
+    min-width: 300px;
+    max-width: 300px;
+  }
+  body .kidnapImg{
+    max-height: 300px;
+    padding-top: 0.5rem;
+  }
+}
 
 @media screen and (max-width: 550px) {
   .projectContent{

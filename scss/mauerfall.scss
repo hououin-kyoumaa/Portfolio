@@ -26,7 +26,6 @@ body{
 
 .padding-top{
   padding-top: 100px;
-
 }
 
 .projectContent{
@@ -67,13 +66,65 @@ body{
   max-height: 500px;
 }
 
-.contentContainerSolo{
-  min-width: 600px;
-  max-width: 1200px;
-  min-height: 600px;
-  max-height: 800px;
+@media screen and (max-width: 2000px) {
+  .contentContainerSolo{
+    max-height: 800px;
+    max-width: 1600px;
+  }
+  .narrativeFlowboardImg{
+      max-height: 800px;
+      max-width: 1600px;
+      }
 }
 
+@media screen and (max-width: 1600px) {
+  .narrativeFlowboardImg{
+      max-height: 580px;
+      //  display: block;
+  }
+  .contentContainerSolo{
+    min-width: 600px;
+    max-width: 1200px;
+    min-height: 600px;
+    max-height: 800px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .narrativeFlowboardImg{
+      max-height: 480px;
+      //  display: block;
+  }
+  .contentContainerSolo{
+    min-width: 600px;
+    max-width: 1200px;
+    min-height: 600px;
+    max-height: 800px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .narrativeFlowboardImg{
+      max-height: 480px;
+      max-width: 600px;
+    //  display: block;
+  }
+  .contentContainerSolo{
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 300px;
+    max-height: 480px;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .narrativeFlowboardImg{
+    display: none;
+  }
+  .contentContainerSolo{
+    display: none;
+  }
+}
 .contentContainerVertical{
   min-width: 300px;
   max-width: 400px;
@@ -99,7 +150,7 @@ body{
   min-width: 400px;
   max-width: 1200px;
   min-height: 200px;
-  max-height: 1000px;
+  max-height: 1300px;
 }
 
 .contentContainerAvgIng{
@@ -122,8 +173,74 @@ body{
     min-width: 300px;
     flex-direction: column;
   }
+  .contentContainerTexySolo{
+      min-width: 300px;
+  }
   #projectContentPadding{
     padding-left: 20px;
+  }
+  .contentContainerAvgIng{
+    max-width: 400px;
+    max-height: 400px;
+  }
+  body .mechanicsImg{
+    max-width: 450px;
+    max-height: 400px;
+    min-width: 450px;
+    min-height: 400px;
+
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .projectContent{
+    flex-direction: column;
+  }
+  .contentContainer{
+    min-width: 300px;
+    flex-direction: column;
+  }
+  .contentContainerTexySolo{
+      min-width: 300px;
+  }
+  #projectContentPadding{
+    padding-left: 20px;
+  }
+  body .mechanicsImg{
+    max-width: 300px;
+    max-height: 266px;
+    min-width: 300px;
+    min-height: 266px;
+  }
+  .contentContainerAvgIng{
+    max-width: 300px;
+    max-height: 266px;
+    min-width: 300px;
+    min-height: 266px;
+  }
+  body .coreloopImg{
+    max-width: 300px;
+    max-height: 266px;
+    min-width: 300px;
+    min-height: 266px;
+  }
+  body .narrativeImg{
+    max-width: 350px;
+    max-height: 233px;
+    min-width: 350px;
+    min-height: 233px;
+  }
+  .contentContainerHorizontal{
+    max-width: 350px;
+    max-height: 233px;
+    min-width: 350px;
+    min-height: 233px;
+  }
+  body .playtestImg{
+    max-width: 300px;
+    max-height: 266px;
+    min-width: 300px;
+    min-height: 266px;
 
   }
 }
@@ -183,13 +300,7 @@ ul{
   max-height: 400px;
   padding-top: 0.5rem;
 }
-.narrativeFlowboardImg{
-  min-width: 600px;
-  max-width: 1200px;
-  min-height: 600px;
-  max-height: 800px;
-  padding-top: 0.5rem;
-}
+
 .playtestImg{
   min-width: 400px;
   min-height: 400px;
