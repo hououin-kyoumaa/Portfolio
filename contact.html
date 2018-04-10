@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styleContact.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+      <div class="topnav" id="myTopnav">
+          <div class ="floatRight" id= "insideTopNav">
+            <a href="main.html" class="active" id="name" onclick="undoMoveLeft();">Harkeerat Chhina</a>
+            <a href="contact.html" class="navContent" id="navItem1" onclick="undoMoveLeft();">Contact</a>
+            <a href="main.html#about" class="navContent" id="navItem2" onclick="undoMoveLeft();">About</a>
+            <a href="main.html#myProjects" class="navContent" id="navItem3" onclick="undoMoveLeft();">Projects</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+          </div>
+     </div>
+
+     <div class ="projectContent padding-top">
+         <div class="contentContainerAvgIng contentContainerSame">
+           <img src ="images/icon.png" class = "overviewImg" alt="AI">
+         </div>
+         <div class="contentContainer contentContainerSame">
+               <h3 class ="context"> Hi there if you want to contact me please provide a name and email and
+                                    I will try to respond within 24 hours :)
+               </h3>
+         </div>
+     </div>
+
+    <div class ="projectContent">
+      <div class = "contactForm ">
+          <h3>Contact Form</h3>
+      </div>
+    </div>
+
+    <div class ="projectContent">
+        <div class="contentContainerSolo contentContainerSame formBackground">
+          <form action="contactSuccess.html">
+            <label for="fname"> Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email...">
+
+
+            <label for="subject">Message</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+          </form>        
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+           <div class="topFooter">
+              <img src="images/fb2.png" class="socialMediaImg" alt="socialMedia">
+              <img src="images/t2.png" class="socialMediaImg" alt="socialMedia">
+              <img src="images/i3.png" class="socialMediaImg" alt="socialMedia">
+              <img src="images/e2.png" class="socialMediaImg" alt="socialMedia">
+               <p class ="footerTextA"> Simon Fraser University  250-13450 102 Ave, Surrey, BC V3T 0A3 </p>
+           </div>
+
+          <p class ="footerTextB"> &copy; Copyright. All Rights Reserved   |  <a href="url" class ="footerLinks">references </a>
+          | <a href="url" class ="footerLinks">style guide </a>  | <a href="https://github.com/IAT339/P02" class ="footerLinks">github </a> </p>
+
+    </div>
+
+    <script>
+      var shurnk = false;
+      var leftMoved = false;
+
+      function myFunction() {
+         // adds a class called responsive to the div with the id insideTopNav
+          var x = document.getElementById("insideTopNav");
+          if (x.className === "floatRight") {
+            x.className += " responsive";
+            $('body').toggleClass('moveLeft');
+            $('.topnav').toggleClass('moveRight');
+            $('#navItem1').css('color', '#000');
+            $('#navItem2').css('color', '#000');
+            $('#navItem3').css('color', '#000');
+            $('#name').css('display', 'none');
+            $('.icon').css('color', 'black');
+            $('html, body').animate({ scrollTop: 0 }, 'fast');
+
+            leftMoved = true;
+            console.log(leftMoved);
+            shurnk = !shurnk;
+          }
+          else {
+            // undos adding the new responsive class
+            x.className = "floatRight";
+            $('body').toggleClass('moveLeft');
+            $('.topnav').toggleClass('moveRight');
+            $('#navItem1').css('color', '#000');
+            $('#navItem2').css('color', '#000');
+            $('#navItem3').css('color', '#000');
+            $('#name').css('display', 'block');
+              $('.icon').css('color', 'black');
+            leftMoved = false;
+            shurnk = !shurnk;
+          }
+      }
+      // removes the body shifting left. Return body to original position
+      function undoMoveLeft(){
+        console.log(leftMoved);
+        if(leftMoved){
+          console.log("content is shifted left ");
+          $('body').removeClass('moveLeft');
+          $('.topnav').removeClass('moveRight');
+          myFunction();
+          $('body').removeClass('moveLeft');
+          $('.topnav').removeClass('moveRight');
+          leftMoved = false;
+        }
+        else{
+          $('body').removeClass('moveLeft');
+          $('.topnav').removeClass('moveRight');
+        }
+      }
+
+      $(document).ready(function() {
+            // stores the screen in a variable
+            var $window = $(window);
+            function checkWidth() {
+                var windowsize = $window.width();
+                if (windowsize > 500) {
+                    $('#navItem1').css('color', 'black');
+                    $('#navItem2').css('color', 'black');
+                    $('#navItem3').css('color', 'black');
+                    $('.icon').css('color', 'black');
+                      //if the window is greater than 500px and the body has be shifted
+                    if(leftMoved){
+                      console.log("content is shifted left ");
+                      // remove the shift
+                      $('body').removeClass('moveLeft');
+                      $('.topnav').removeClass('moveRight');
+                      // apply my function to hide the hamburger icon
+                      // this also applies the shift again
+                      myFunction();
+                      // undo the shift applied by my function
+                      $('body').removeClass('moveLeft');
+                      $('.topnav').removeClass('moveRight');
+                      // change boolean
+                      leftMoved = false;
+                    }
+                      //if the window is greater than 500px and te body has NOT be shifted
+                    else{
+                      $('body').removeClass('moveLeft');
+                      $('.topnav').removeClass('moveRight');
+                    }
+                }
+                // if window is not greater than 600px
+                else{
+                  $('#navItem1').css('color', 'black');
+                  $('#navItem2').css('color', 'black');
+                  $('#navItem3').css('color', 'black');
+                }
+              }
+              // Execute on load
+              checkWidth();
+              // Bind event listener
+              $(window).resize(checkWidth);
+      });
+
+      $(document).ready(function(){
+           var scroll_start = 0;
+           //start change define where the color of the element should change
+           var startchange = $('.projectContent');
+           var offset = startchange.offset();
+           var $window = $(window);
+           $(document).scroll(function() {
+             var windowsize2 = $window.width();
+              scroll_start = $(this).scrollTop();
+              // if scrolling goes past the offset value
+              if(scroll_start > offset.top) {
+                  // if past offset and less than 600px
+                  if(windowsize2 < 600){
+                    $('#myTopnav').css('background-color', 'white');
+                    $('#navItem1').css('color', 'black');
+                    $('#navItem2').css('color', 'black');
+                    $('#navItem3').css('color', 'black');
+                    $('#name').css('display', 'none');
+                     $('.icon').css('color', 'black');
+                  }
+                  // if past offset
+                  else{
+                      $('#myTopnav').css('background-color', 'white');
+                      $('#navItem1').css('color', 'black');
+                      $('#navItem2').css('color', 'black');
+                      $('#navItem3').css('color', 'black');
+                      $('#name').css('display', 'none');
+                      $('.icon').css('color', 'black');
+                  }
+               }
+               // if its not past offset
+               else {
+                 // if not past offset and body has been shifted
+                 if(leftMoved){
+                    $('#myTopnav').css('background-color', 'transparent');
+                    $('#navItem1').css('color', 'black');
+                    $('#navItem2').css('color', 'black');
+                    $('#navItem3').css('color', 'black');
+                    $('#name').css('display', 'none');
+                    $('.icon').css('color', 'black');
+                 }
+                 // if not past offset and body has NOT been shifted
+                 else{
+                   $('.icon').css('color', 'white');
+                   $('#myTopnav').css('background-color', 'transparent');
+                   $('#navItem1').css('color', 'black');
+                   $('#navItem2').css('color', 'black');
+                   $('#navItem3').css('color', 'black');
+                     $('#name').css('display', 'block');
+                 }
+               }
+           });
+      });
+
+      $(function()
+      {
+          function after_form_submitted(data)
+          {
+              if(data.result == 'success')
+              {
+                  //$('form#reused_form').hide();
+                  $('#success_message').show();
+                  $('#error_message').hide();
+              }
+              else
+              {
+                  $('#error_message').append('<ul></ul>');
+
+                  jQuery.each(data.errors,function(key,val)
+                  {
+                      $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+                  });
+                  $('#success_message').hide();
+                  $('#error_message').show();
+
+                  //reverse the response on the button
+                  $('button[type="button"]', $form).each(function()
+                  {
+                      $btn = $(this);
+                      label = $btn.prop('orig_label');
+                      if(label)
+                      {
+                          $btn.prop('type','submit' );
+                          $btn.text(label);
+                          $btn.prop('orig_label','');
+                      }
+                  });
+
+              }//else
+          }
+
+          $('#reused_form').submit(function(e)
+          {
+            e.preventDefault();
+
+            $form = $(this);
+            //show some response on the button
+            $('button[type="submit"]', $form).each(function()
+            {
+                $btn = $(this);
+                $btn.prop('type','button' );
+                $btn.prop('orig_label',$btn.text());
+                $btn.text('Sending ...');
+            });
+                        $.ajax({
+                    type: "POST",
+                    url: 'handler.php',
+                    data: $form.serialize(),
+                    success: after_form_submitted,
+                    dataType: 'json'
+                });
+
+          });
+      });
+
+  </script>
+
+
+    </body>
+</html>

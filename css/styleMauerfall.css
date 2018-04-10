@@ -57,6 +57,10 @@
   font-size: 24px;
 }
 
+.navContent:hover {
+  color: #384ea2 !important;
+}
+
 .active {
   float: left;
   display: block;
@@ -74,7 +78,7 @@
 }
 
 .floatRight a:hover {
-  color: blue;
+  color: #384ea2;
 }
 
 .active {

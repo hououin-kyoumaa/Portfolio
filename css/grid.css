@@ -65,10 +65,10 @@ img{
 	margin-bottom:0;
 	font-variant: small-caps;
 	border-style: none;
-	background-color:rgb(101, 214, 207);
+	background-color: #384ea2;
 }
 
-.markup, .markup-indent {
+.markup, .markup-indent, .markup-indent2 {
 	margin:0;
 	font-size:0.9em;
 	font-family: "Open Sans", sans-serif; font-weight: 300;
@@ -76,6 +76,9 @@ img{
 
 .markup-indent {
 	text-indent:20px;
+}
+.markup-indent2 {
+	text-indent:40px;
 }
 
 

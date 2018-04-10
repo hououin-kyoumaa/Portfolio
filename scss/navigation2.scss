@@ -2,7 +2,7 @@
 
 @mixin navContent-Active{
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -22,15 +22,12 @@
   padding: 0;
   padding-right: 1rem;
   margin: 0;
-  color: white;
+  color: black;
 }
 
 .navContent {
   float: right;
   @include navContent-Active;
-}
-.navContent:hover{
-  color: #384ea2 !important;
 }
 
 .active {
@@ -47,9 +44,12 @@
 .floatRight a:hover {
   color: #384ea2;
 }
+.navContent:hover{
+  color: #384ea2 !important;
+}
 .active {
   background: none;
-  color: white;
+  color: black ;
 }
 .floatRight .icon {
   display: none;

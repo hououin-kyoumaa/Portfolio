@@ -1,87 +1,74 @@
 /*------ The navigation bar ------*/
+.topnav {
+  overflow: hidden;
+  padding: 1rem;
+  padding-bottom: 0;
+  font-family: AtarianR;
+  position: fixed;
+  width: 100%; }
 
-@mixin navContent-Active{
+.floatRight {
+  padding: 0;
+  padding-right: 1rem;
+  margin: 0;
+  color: white; }
+
+.navContent {
+  float: right;
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 24px;
-}
-
-.topnav {
-  overflow: hidden  ;
-  padding:  1rem;
-  padding-bottom: 0;
-  font-family: AtarianR;
-  position: fixed;
-  width: 100%;
-}
-
-.floatRight{
-  padding: 0;
-  padding-right: 1rem;
-  margin: 0;
-  color: white;
-}
-
-.navContent {
-  float: right;
-  @include navContent-Active;
-}
-.navContent:hover{
-  color: #384ea2 !important;
-}
+  font-size: 24px; }
 
 .active {
   float: left;
-  @include navContent-Active;
-}
-
-.icon{
+  display: block;
+  color: white;
+  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
-}
+  font-size: 24px; }
+
+.icon {
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px; }
 
 .floatRight a:hover {
-  color: #384ea2;
-}
+  color: blue; }
+
 .active {
   background: none;
-  color: white;
-}
+  color: black; }
+
 .floatRight .icon {
-  display: none;
-}
-.moveLeft{
+  display: none; }
+
+.moveLeft {
   position: absolute;
   right: 25%;
-  margin-right: 50%;
-}
-.moveRight{
+  margin-right: 50%; }
+
+.moveRight {
   position: absolute;
-  left: 25%;
-}
+  left: 25%; }
 
 @media screen and (max-width: 500px) {
-  .floatRight a:not(:first-child) {display: none;}
+  .floatRight a:not(:first-child) {
+    display: none; }
   .floatRight a.icon {
     float: right;
-    display: block;
-  }
+    display: block; }
   .floatRight.responsive {
     position: relative;
-    margin-left: auto;
-  }
+    margin-left: auto; }
   .floatRight.responsive .icon {
     position: absolute;
     right: 0;
-    top: 0;
-  }
+    top: 0; }
   .floatRight.responsive a {
     float: none;
     display: block;
-    text-align: right;
-  }
-}
+    text-align: right; } }
