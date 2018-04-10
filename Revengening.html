@@ -44,7 +44,7 @@
             </p>
       </div>
       <div class="contentContainer">
-          <img src ="images/kidnap.png" class = "kidnapImg" alt="kidnap">
+          <img src ="images/kidnap.png" class = "kidnapImg2" alt="kidnap">
       </div>
     </div>
 
@@ -60,13 +60,13 @@
             </p>
       </div>
       <div class="contentContainer">
-          <img src ="images/whiteBoxing3.png" class = "kidnapImg" alt="kidnap">
+          <img src ="images/whiteBoxing3.png" class = "kidnapImg2" alt="kidnap">
       </div>
     </div>
 
     <div class ="projectContent">
       <div class="contentContainer">
-          <img src ="images/levelDesign4.png" class = "kidnapImg" alt="kidnap">
+          <img src ="images/levelDesign4.png" class = "kidnapImg2" alt="kidnap">
       </div>
       <div class="contentContainer">
           <img src ="images/leveldesign3.png" class = "kidnapImg" alt="kidnap">
@@ -78,7 +78,7 @@
           <img src ="images/levelDesign.png" class = "kidnapImg" alt="kidnap">
       </div>
       <div class="contentContainer">
-          <img src ="images/levelDesign2.png" class = "kidnapImg" alt="kidnap">
+          <img src ="images/levelDesign2.png" class = "kidnapImg2" alt="kidnap">
       </div>
     </div>
 
@@ -98,7 +98,6 @@
       </div>
     </div>
 
-
     <div class ="projectContent">
       <div class="contentContainerLong">
             <h2 class ="kongtext"> Playtesting </h2>
@@ -116,7 +115,6 @@
           <img src ="images/playtesting.png" class = "kidnapImg" alt="kidnap">
       </div>
     </div>
-
 
         <div class ="projectContent">
           <div class="contentContainerLong">
@@ -139,23 +137,31 @@
           </div>
         </div>
 
-
-
-
         <div class="footer">
                <div class="topFooter">
-                  <img src="images/fb2.png" class="socialMediaImg" alt="socialMedia">
-                  <img src="images/t2.png" class="socialMediaImg" alt="socialMedia">
-                  <img src="images/i3.png" class="socialMediaImg" alt="socialMedia">
-                  <img src="images/e2.png" class="socialMediaImg" alt="socialMedia">
-                   <p class ="footerTextA"> Simon Fraser University  250-13450 102 Ave, Surrey, BC V3T 0A3 </p>
+                 <div class ="box">
+                    <img src="images/icon.png" alt ="profile icon" class="profileIcon">
+                 </div>
+                 <div class ="box">
+                    <a href="https://www.facebook.com/harkeerat.chhina" >
+                         <img src="images/facebook.png" alt="socialMeida" class="socialMediaImg" id="facebook" onmouseover="onHoverFacebook()" onmouseout="offHoverFacebook()">
+                    </a>
+                    <a href="#" >
+                       <img src="images/twitter.png" alt="socialMeida" class="socialMediaImg" id="twitter" onmouseover="onHoverTwitter()" onmouseout="offHoverTwitter()">
+                    </a>
+                    <a href="contact.html" >
+                       <img src="images/email.png" alt="socialMeida" class="socialMediaImg" id="email" onmouseover="onHoverEmail()" onmouseout="offHoverEmail()">
+                    </a>
+                 </div>
+                 <div class ="box">
+                    <p class ="footerTextA"> Simon Fraser University  </p>
+                     <p class ="footerTextA"> Bachelor of Science in Interactive Systems  </p>
+                 </div>
+
                </div>
-
-              <p class ="footerTextB"> &copy; Copyright. All Rights Reserved   |  <a href="url" class ="footerLinks">references </a>
+              <p class ="footerTextB"> &copy; Copyright. All Rights Reserved   |  <a href="references.html" class ="footerLinks">references </a>
               | <a href="styleguide.html" class ="footerLinks">style guide </a>  | <a href="https://github.com/hououin-kyoumaa/Portfolio" class ="footerLinks">github </a> </p>
-
         </div>
-
 
     <script>
       function myFunction() {
@@ -163,6 +169,13 @@
           if (x.className === "floatRight") { x.className += " responsive"; }
           else { x.className = "floatRight";  }
       }
+
+      function onHoverFacebook()  {         $("#facebook").attr('src', 'images/fb2.png');           }
+      function onHoverEmail()       {         $("#email").attr('src', 'images/e2.png');       }
+      function onHoverTwitter()      {         $("#twitter").attr('src', 'images/t2.png');            }
+      function offHoverFacebook()  {         $("#facebook").attr('src', 'images/facebook.png');           }
+      function offHoverEmail()       {         $("#email").attr('src', 'images/email.png');       }
+      function offHoverTwitter()      {         $("#twitter").attr('src', 'images/twitter.png');            }
 
       $(document).ready(function(){
        var scroll_start = 0;

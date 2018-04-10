@@ -26,7 +26,7 @@
     <div class ="projectContent padding-top" id="projectContentPadding">
       <div class="contentContainer contentContainerSame">
             <h2 class ="kongtext"> Overview </h2>
-            <p class ="context"> Project duration: 2.5 months Role: level design, play testing, modeling, audio.    </p>
+            <p class ="context"> Project duration: 2.5 months Role: level design, play testing, modeling, lighting, audio.    </p>
 
             <p class ="context"> Mauerfall is a stealth-adventure video game, in where the player takes on the role of Olivia, a 14-year old
               girl who is living in East Germany during the Berlin Crisis in 1961.Pursued by the East German police, Olivia must escape East
@@ -181,7 +181,6 @@
       </div>
     </div>
 
-
     <div class ="projectContent">
         <div class="contentContainerAvgIng contentContainerSame">
             <img src ="images/mauerfallPlaytesting1.png" class = "playtestImg" alt ="playtestImg">
@@ -194,21 +193,31 @@
         </div>
     </div>
 
+    <div class="footer">
+           <div class="topFooter">
+             <div class ="box">
+                <img src="images/icon.png" alt ="profile icon" class="profileIcon">
+             </div>
+             <div class ="box">
+                <a href="https://www.facebook.com/harkeerat.chhina" >
+                     <img src="images/facebook.png" alt="socialMeida" class="socialMediaImg" id="facebook" onmouseover="onHoverFacebook()" onmouseout="offHoverFacebook()">
+                </a>
+                <a href="#" >
+                   <img src="images/twitter.png" alt="socialMeida" class="socialMediaImg" id="twitter" onmouseover="onHoverTwitter()" onmouseout="offHoverTwitter()">
+                </a>
+                <a href="contact.html" >
+                   <img src="images/email.png" alt="socialMeida" class="socialMediaImg" id="email" onmouseover="onHoverEmail()" onmouseout="offHoverEmail()">
+                </a>
+             </div>
+             <div class ="box">
+                <p class ="footerTextA"> Simon Fraser University  </p>
+                 <p class ="footerTextA"> Bachelor of Science in Interactive Systems  </p>
+             </div>
 
-        <div class="footer">
-               <div class="topFooter">
-                  <img src="images/fb2.png" class="socialMediaImg" alt="socialMedia">
-                  <img src="images/t2.png" class="socialMediaImg" alt="socialMedia">
-                  <img src="images/i3.png" class="socialMediaImg" alt="socialMedia">
-                  <img src="images/e2.png" class="socialMediaImg" alt="socialMedia">
-                   <p class ="footerTextA"> Simon Fraser University  250-13450 102 Ave, Surrey, BC V3T 0A3 </p>
-               </div>
-
-              <p class ="footerTextB"> &copy; Copyright. All Rights Reserved   |  <a href="url" class ="footerLinks">references </a>
-              | <a href="styleguide.html" class ="footerLinks">style guide </a>  | <a href="https://github.com/hououin-kyoumaa/Portfolio" class ="footerLinks">github </a> </p>
-
-        </div>
-
+           </div>
+          <p class ="footerTextB"> &copy; Copyright. All Rights Reserved   |  <a href="references.html" class ="footerLinks">references </a>
+          | <a href="styleguide.html" class ="footerLinks">style guide </a>  | <a href="https://github.com/hououin-kyoumaa/Portfolio" class ="footerLinks">github </a> </p>
+    </div>
 
         <script>
           var shurnk = false;
@@ -247,11 +256,18 @@
               }
           }
 
+          function onHoverFacebook()  {         $("#facebook").attr('src', 'images/fb2.png');           }
+          function onHoverEmail()       {         $("#email").attr('src', 'images/e2.png');       }
+          function onHoverTwitter()      {         $("#twitter").attr('src', 'images/t2.png');            }
+          function offHoverFacebook()  {         $("#facebook").attr('src', 'images/facebook.png');           }
+          function offHoverEmail()       {         $("#email").attr('src', 'images/email.png');       }
+          function offHoverTwitter()      {         $("#twitter").attr('src', 'images/twitter.png');            }
+
           // removes the body shifting left. Return body to original position
           function undoMoveLeft(){
-            console.log(leftMoved);
+            //console.log(leftMoved);
             if(leftMoved){
-              console.log("content is shifted left ");
+              //console.log("content is shifted left ");
               $('body').removeClass('moveLeft');
               $('.topnav').removeClass('moveRight');
               myFunction();
@@ -279,7 +295,7 @@
                         $('.icon').css('color', 'white');
                           //if the window is greater than 500px and the body has be shifted
                         if(leftMoved){
-                          console.log("content is shifted left ");
+                          //console.log("content is shifted left ");
                           // remove the shift
                           $('body').removeClass('moveLeft');
                           $('.topnav').removeClass('moveRight');

@@ -1,0 +1,318 @@
+/* -----different fonts for the page------*/
+@font-face {
+  font-family: Atarian;
+  src: url("../fonts/Atarian/SF Atarian System Bold.ttf");
+  font-weight: bold; }
+
+@font-face {
+  font-family: AtarianR;
+  src: url("../fonts/Atarian/SF Atarian System.ttf"); }
+
+@font-face {
+  font-family: raleway;
+  src: url("../fonts/raleway/Raleway-Medium.ttf"); }
+
+@font-face {
+  font-family: kongtext;
+  src: url("../fonts/kongtext/kongtext.ttf"); }
+
+@font-face {
+  font-family: PostScriptum;
+  src: url("../fonts/post_scriptum/PostScriptum Light.ttf"); }
+
+@font-face {
+  font-family: ralewayBold;
+  src: url("../fonts/raleway/Raleway-ExtraBold.ttf"); }
+
+/* This stylesheet covers dimensions of columns as well as its responsiveness among different resolutions*/
+/* With this selector, we are specifying that all objects use the border-box model (not the content-box model)*/
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.fontA {
+  font-family: raleway; }
+
+.fontB {
+  font-family: PostScriptum; }
+
+/*Here we are using a 'fancy' css selector that is specifying if the class of an item starts with 'grid-col-', then we should apply the styling listed */
+[class^='grid-col-'] {
+  float: left;
+  padding: 0;
+  text-align: center; }
+
+/* Assigning width dimensions of columns */
+.grid-col-1of10 {
+  width: 10%;
+  text-align: center; }
+
+.grid-col-2of10 {
+  width: 20%;
+  text-align: left; }
+
+.grid-col-3of10 {
+  width: 33%;
+  text-align: left; }
+
+.grid-col-5of10 {
+  width: 50%; }
+
+.grid-row::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+/* @media queries to collapse the columns when width is less than "x" em */
+@media (max-width: 80em) {
+  .grid-col-5of10 {
+    width: 100%; }
+  .grid-col-2of10 {
+    width: 33.333%; }
+  .grid-listing {
+    width: 33.333%; }
+  .grid-col-3of10 {
+    width: 50%; } }
+
+@media (max-width: 50em) {
+  .grid-col-3of10 {
+    width: 100%; }
+  .grid-col-2of10 {
+    width: 100%; }
+  .grid-listing {
+    width: 100%; }
+  .grid-col-3of10 {
+    width: 50%; } }
+
+@media (max-width: 31em) {
+  .grid-col-2of10 {
+    width: 100%; }
+  .grid-listing {
+    width: 100%; }
+  .grid-col-3of10 {
+    width: 100%; }
+  .grid-col-1of10 {
+    width: 100%; }
+  .button-nav {
+    margin-top: 0;
+    margin-bottom: 0; } }
+
+.active {
+  float: left;
+  background: none;
+  font-family: AtarianR;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px; }
+
+.active:hover {
+  color: #384ea2 !important; }
+
+/* Font and box styling for different tag elements */
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: black;
+  padding: 1em; }
+
+h1, h2, h3 {
+  margin: 0; }
+
+h1 {
+  font-size: 6.6em;
+  font-family: 'Atarian', sans-serif;
+  font-weight: 700; }
+
+h2 {
+  font-size: 2.0em;
+  font-family: 'raleway', sans-serif;
+  font-weight: 600; }
+
+.a {
+  font-size: 2.0em;
+  font-family: 'PostScriptum', sans-serif;
+  font-weight: 600; }
+
+.b {
+  font-size: 2.0em;
+  font-family: 'kongtext', sans-serif;
+  font-weight: 600; }
+
+h3 {
+  font-size: 1.6em;
+  font-family: 'Atarian', serif;
+  font-weight: 500; }
+
+p, ul, ol {
+  font-size: 1em;
+  line-height: 1.3em;
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400; }
+
+ul, ol {
+  margin: 0;
+  padding-left: 1.5em; }
+
+img {
+  height: auto;
+  width: auto;
+  max-width: 100%; }
+
+.hd1 {
+  font-size: 5rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-variant: small-caps;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: #C7C9C9; }
+
+.hd2 {
+  font-size: 1.8rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: .2rem;
+  color: white;
+  margin-bottom: 0;
+  font-variant: small-caps;
+  border-style: none;
+  background-color: #384ea2; }
+
+.markup, .markup-indent, .markup-indent2 {
+  margin: 0;
+  font-size: 0.9em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300; }
+
+.markup-indent {
+  text-indent: 20px; }
+
+.markup-indent2 {
+  text-indent: 40px; }
+
+nav {
+  width: 100%; }
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3; }
+
+.nav li {
+  float: left; }
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; }
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+  border-bottom: 2px solid black; }
+
+li a.active {
+  color: green;
+  border-bottom: 2px solid black; }
+
+a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.3em;
+  text-align: left; }
+
+.button-nav {
+  display: inline-block;
+  padding: 0.7em 0.9em;
+  color: #fff;
+  background-color: #384ea2;
+  border-radius: 0.25em;
+  text-decoration: none;
+  -webkit-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out; }
+
+.button-nav:hover, .button-nav:focus {
+  background-color: #68C3A3; }
+
+.button-form {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: #fff;
+  background-color: #4ECDC4;
+  border-radius: 0.25em;
+  text-decoration: none;
+  -webkit-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out; }
+
+.button-form:hover, .button-nav:focus {
+  background-color: #68C3A3; }
+
+input[type=text] {
+  width: 20%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 10px 10px 10px 10px; }
+
+.listing {
+  border: thin silver solid;
+  margin: 0.5em;
+  padding: 0.5em;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0; }
+
+.listing a {
+  padding: 5px;
+  text-align: center; }
+
+.listing a, .listing a:visited {
+  text-decoration: none;
+  color: black; }
+
+.grid-row {
+  background-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(229, 229, 229, 0.5);
+  padding: 25px; }
+
+.grid-row-markup {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  padding: 10px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: rgba(229, 229, 229, 0.5);
+  background-color: #f2f2f2; }
+
+.grid-structure {
+  border: 1px solid black;
+  text-align: center; }
+
+.color-container {
+  height: 4em;
+  width: 4em; }

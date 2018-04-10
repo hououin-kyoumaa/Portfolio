@@ -1,18 +1,11 @@
-
 <!doctype html>
 <html lang="en">
 
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Style Guide</title>
-    <link rel="stylesheet" href="css/styleguide.css">
-    <link rel="stylesheet" href="css/grid.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/styleStyleguide.css">
   </head>
 
   <body>
@@ -32,7 +25,7 @@
 	    		<h1> Heading 1 </h1>
 	    	</div>
 	    	<div class = "grid-col-2of10">
-	    		<p> Lato (2.6em) </p>
+	    		<p> Atarian (6.6em) </p>
 	    	</div>
    		</div> 	<!-- end of grid-row  -->
 
@@ -41,17 +34,34 @@
 	    		<h2> Heading 2 </h2>
 	    	</div>
 	    	<div class = "grid-col-2of10">
-	    		<p> Lato (1.9em) </p>
+	    		<p> raleway (2.0em) </p>
 	    	</div>
+   		</div>
 
-   		</div> <!-- end of grid-row  -->
+      <div class="grid-row">
+          <div class = "grid-col-2of10">
+              <h2 class="a"> Heading 2 </h2>
+          </div>
+          <div class = "grid-col-2of10">
+              <p> PostScriptum (2.0em) </p>
+          </div>
+      </div>
+
+      <div class="grid-row">
+          <div class = "grid-col-2of10">
+              <h2 class ="b"> Heading 2 </h2>
+          </div>
+          <div class = "grid-col-2of10">
+              <p> kongtext (2.0em) </p>
+          </div>
+      </div><!-- end of grid-row  -->
 
      	<div class="grid-row">
 	    	<div class = "grid-col-2of10">
 	    		<h3> Heading 3 </h3>
 	    	</div>
 	    	<div class = "grid-col-2of10">
-	    		<p> Crete Round (1.6em) </p>
+	    		<p> Atarian (1.6em) </p>
 	    	</div>
       </div> <!--end of grid-row -->
 
@@ -62,16 +72,16 @@
         <p class ="markup"> &lt;h3&gt; Heading 3 &lt;/h3&gt;</p>
    		</div> 		<!-- end of section for headings markup -->
 
-
     <!-- Visual styling for paragraphs -->
     <p class="hd2"> default paragraph styling </p>
 
     <div class="grid-row">
       <div class="grid-col-3of10">
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue.
+        <p class = "fontA"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue.
           Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est
           malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est
         </p>
+
       </div>
     </div> <!-- end of grid-row for paragraph styling -->
       <div class = "grid-row-markup">
@@ -79,9 +89,6 @@
            in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero
            at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est &lt;/p&gt;</p>
     </div>
-
-
-
 
 
     <!-- In-text link -->
@@ -96,10 +103,10 @@
     </div> <!-- end of row for in-text link markup -->
 
     <!--Navigation Button Style -->
-    <p class="hd2"> navigation button </p>
+    <p class="hd2"> button </p>
     <div class="grid-row">
       <div class="grid-col-2of10">
-        <a href="http://reddit.com" class="button-nav"> Button </a>
+        <a href="#" class="button-nav"> Button </a>
       </div>
     </div> <!-- end of row for navigation button style -->
 
@@ -109,14 +116,14 @@
     </div> <!-- end of row for navigation button style markup -->
 
     <!--Submit and reset button for forms -->
-    <p class="hd2"> submit and reset button </p>
+    <p class="hd2"> Navigation button </p>
     <div class="grid-row">
-      <button class="button-form">Submit</button>
+        <a href="#home" class="active" id="name2">Harkeerat Chhina</a>
     </div> <!-- end of row for submit and reset button for forms -->
 
     <!--Submit and reset button for forms markup -->
     <div class="grid-row-markup">
-      <p class="markup"> &lt;button class="button-form"&gt; Submit &lt;/button&gt;</p>
+      <p class="markup"> &lt;a href="#home" class="active" id="name"&gt; Harkeerat Chhina &lt;/a&gt;</p>
     </div> <!-- end of row for submit and reset button for forms markup -->
 
     <!--Text input and label -->
@@ -135,10 +142,10 @@
     <div class="grid-row">
       <div class="topnav" id="myTopnav">
           <div class ="floatRight" id = "insideTopNav">
-            <a href="#home" class="active" id="name" onclick="undoMoveLeft();">Harkeerat Chhina</a>
-            <a href="#home" class="navContent" id="navItem1" onclick="undoMoveLeft();">Contact</a>
-            <a href="#about" class="navContent" id="navItem2" onclick="undoMoveLeft();">About</a>
-            <a href="#myProjects" class="navContent" id="navItem3" onclick="undoMoveLeft();">Projects</a>
+            <a href="#home" class="active" id="name" >Harkeerat Chhina</a>
+            <a href="#home" class="active" id="navItem1" >Contact</a>
+            <a href="#about" class="active" id="navItem2" >About</a>
+            <a href="#myProjects" class="active" id="navItem3" >Projects</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
           </div>
      </div>
@@ -203,7 +210,7 @@
     <div class="grid-row">
           <div class="color-container" style=background-color:#ddd></div>
           <div class="color-container" style=background-color:#696969></div>
-          <div class="color-container" style=background-color:#45a049></div>
+          <div class="color-container" style=background-color:#68C3A3></div>
           <div class="color-container" style=background-color:#384ea2></div>
           <div class="color-container" style=background-color:#fff></div>
           <div class="color-container" style=background-color:#000></div>

@@ -178,6 +178,14 @@
   min-height: 40px;
 }
 
+.profileIcon {
+  max-width: 80px;
+  min-width: 80px;
+  max-height: 100px;
+  min-height: 80px;
+  display: inline-block;
+}
+
 html, body {
   height: 100%;
 }
@@ -327,6 +335,12 @@ p {
   padding-top: 0.5rem;
 }
 
+.kidnapImg2 {
+  max-width: 618px;
+  max-height: 400px;
+  padding-top: 0.5rem;
+}
+
 @media screen and (max-width: 415px) {
   .contentContainerLong {
     min-width: 300px;
@@ -341,6 +355,11 @@ p {
   }
   body .kidnapImg {
     max-height: 300px;
+    padding-top: 0.5rem;
+  }
+  body .kidnapImg2 {
+    max-height: 300px;
+    max-width: 300px;
     padding-top: 0.5rem;
   }
 }

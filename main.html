@@ -36,7 +36,7 @@
 
       <div class="container">
          <a href="Revengening.html" >
-              <img src="images/revengening.png" alt="profile icon" class ="pp" id ="revenge"
+              <img src="images/revengening.png" alt="profile icon" class ="pp" id="revenge"
               onmouseover="onHoverRevenge()" onmouseout="offHoverRevenge()">
         </a>
 
@@ -45,7 +45,7 @@
 
       <div class="container">
         <a href="mauerfall.html" >
-          <img src="images/Mauefall.png" alt="profile icon" class ="pp" id ="Mauerfall"
+          <img src="images/Mauefall.png" alt="profile icon" class ="pp" id="Mauerfall"
           onmouseover="onHoverMauefall()" onmouseout="offHoverMauefall()">
         </a>
         <h2 class ="pieceTitle">Mauefall </h2>
@@ -53,7 +53,7 @@
 
       <div class="container">
           <a href="#" >
-            <img src="images/TheRoyalTuna.png" alt="profile icon" class ="pp" id ="Tuna"
+            <img src="images/TheRoyalTuna.png" alt="profile icon" class ="pp" id="Tuna"
               onmouseover="onHoverTuna()" onmouseout="offHoverTuna()">
           </a>
         <h2 class ="pieceTitle"> The Royal Tuna </h2>
@@ -61,6 +61,7 @@
     </div>
 
     <div class = "VR">
+      <h3> In my spare time i like experimenting with VR </h3>
     </div>
 
     <div class ="projectContent padding-top">
@@ -68,27 +69,44 @@
           <img src ="images/profile.png" alt="profilePic" class = "profileImg" id="about">
       </div>
       <div class="contentContainer contentContainerSame">
-            <p class ="context"> I am a third-year Interactive arts and technology student at Simon Fraser University.
-               My area of research includes issues revolving around games. Particularly I want to discern to what extent
-                we should trust social realistic games such as America's Army as a viable knowledge medium. Data storage
-                 capacity is constantly expanding.  Going from 4.4 MB in 1957 to and easily surpassing three terabytes in
-                  recent years (Computers & the Internet, n.d). With the increasing data capabilities, is it reliable to
-                  trust in increasing realistic games? As a game developer, I think it is important to understand the issues
-                  surrounding games and the potential implications of the games we create. My research seeks to understand
-                  the reliability of America's Army as an accurate depiction of warfare.
+            <p class ="context"> Hi my name is Harkeerat you can call me Hark. I am currently studying at SFU in the field of interactive
+              systems, and yep you guessed it, i love games!
+            </p>
+            <p class ="context"> While there are many aspects to a game and individuals play for a variety of reasons, having solid mechanics
+               and an interesting story are the most important in my opinion. A goofy bizarre idea with some interesting mechanics has the
+               potential to become an addictive game.
+            </p>
+
+            <p class ="context"> I am familiar with the entire process of game development from the initial conceptual stages to the final product
+              including playtesting and refinement. I have had the pleasure to work with various different teams and individuals and hopefully I will
+              be able to work with you one day if you are looking to hire. If you stumbled here accidently you might as well play some of the games.
             </p>
       </div>
     </div>
 
     <div class="footer">
            <div class="topFooter">
-              <img src="images/fb2.png" alt="socialMeida" class="socialMediaImg">
-              <img src="images/t2.png" alt="socialMeida" class="socialMediaImg">
-              <img src="images/i3.png" alt="socialMeida" class="socialMediaImg">
-              <img src="images/e2.png" alt="socialMeida" class="socialMediaImg">
-               <p class ="footerTextA"> Simon Fraser University  250-13450 102 Ave, Surrey, BC V3T 0A3 </p>
+             <div class ="box">
+                <img src="images/icon.png" alt ="profile icon" class="profileIcon">
+             </div>
+             <div class ="box">
+                <a href="https://www.facebook.com/harkeerat.chhina" >
+                     <img src="images/facebook.png" alt="socialMeida" class="socialMediaImg" id="facebook" onmouseover="onHoverFacebook()" onmouseout="offHoverFacebook()">
+                </a>
+                <a href="#" >
+                   <img src="images/twitter.png" alt="socialMeida" class="socialMediaImg" id="twitter" onmouseover="onHoverTwitter()" onmouseout="offHoverTwitter()">
+                </a>
+                <a href="contact.html" >
+                   <img src="images/email.png" alt="socialMeida" class="socialMediaImg" id="email" onmouseover="onHoverEmail()" onmouseout="offHoverEmail()">
+                </a>
+             </div>
+             <div class ="box">
+                <p class ="footerTextA"> Simon Fraser University  </p>
+                 <p class ="footerTextA"> Bachelor of Science in Interactive Systems  </p>
+             </div>
+
            </div>
-          <p class ="footerTextB"> &copy; Copyright. All Rights Reserved   |  <a href="url" class ="footerLinks">references </a>
+          <p class ="footerTextB"> &copy; Copyright. All Rights Reserved   |  <a href="references.html" class ="footerLinks">references </a>
           | <a href="styleguide.html" class ="footerLinks">style guide </a>  | <a href="https://github.com/hououin-kyoumaa/Portfolio" class ="footerLinks">github </a> </p>
     </div>
 
@@ -137,11 +155,19 @@
       function onHoverTuna()       {         $("#Tuna").attr('src', 'images/TheRoyalTunaHover.png');       }
       function offHoverTuna()      {         $("#Tuna").attr('src', 'images/TheRoyalTuna.png');            }
 
+      function onHoverFacebook()  {         $("#facebook").attr('src', 'images/fb2.png');           }
+      function onHoverEmail()       {         $("#email").attr('src', 'images/e2.png');       }
+      function onHoverTwitter()      {         $("#twitter").attr('src', 'images/t2.png');            }
+      function offHoverFacebook()  {         $("#facebook").attr('src', 'images/facebook.png');           }
+      function offHoverEmail()       {         $("#email").attr('src', 'images/email.png');       }
+      function offHoverTwitter()      {         $("#twitter").attr('src', 'images/twitter.png');            }
+
+
       // removes the body shifting left. Return body to original position
       function undoMoveLeft(){
-        console.log(leftMoved);
+        //console.log(leftMoved);
         if(leftMoved){
-          console.log("content is shifted left ");
+          //console.log("content is shifted left ");
           $('body').removeClass('moveLeft');
           $('.topnav').removeClass('moveRight');
           myFunction();
@@ -167,7 +193,7 @@
                     $('.icon').css('color', 'white');
                       //if the window is greater than 500px and the body has be shifted
                     if(leftMoved){
-                      console.log("content is shifted left ");
+                      //console.log("content is shifted left ");
                       // remove the shift
                       $('body').removeClass('moveLeft');
                       $('.topnav').removeClass('moveRight');

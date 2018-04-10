@@ -178,6 +178,14 @@
   min-height: 40px;
 }
 
+.profileIcon {
+  max-width: 80px;
+  min-width: 80px;
+  max-height: 100px;
+  min-height: 80px;
+  display: inline-block;
+}
+
 html, body {
   height: 100%;
 }
@@ -453,15 +461,15 @@ body {
     min-height: 266px;
   }
   body .narrativeImg {
-    max-width: 350px;
+    max-width: 300px;
     max-height: 233px;
-    min-width: 350px;
+    min-width: 300px;
     min-height: 233px;
   }
   .contentContainerHorizontal {
-    max-width: 350px;
+    max-width: 300px;
     max-height: 233px;
-    min-width: 350px;
+    min-width: 300px;
     min-height: 233px;
   }
   body .playtestImg {
@@ -469,6 +477,9 @@ body {
     max-height: 266px;
     min-width: 300px;
     min-height: 266px;
+  }
+  body .overviewImg {
+    max-width: 300px;
   }
 }
 

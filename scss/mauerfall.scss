@@ -225,15 +225,15 @@ body{
     min-height: 266px;
   }
   body .narrativeImg{
-    max-width: 350px;
+    max-width: 300px;
     max-height: 233px;
-    min-width: 350px;
+    min-width: 300px;
     min-height: 233px;
   }
   .contentContainerHorizontal{
-    max-width: 350px;
+    max-width: 300px;
     max-height: 233px;
-    min-width: 350px;
+    min-width: 300px;
     min-height: 233px;
   }
   body .playtestImg{
@@ -242,6 +242,9 @@ body{
     min-width: 300px;
     min-height: 266px;
 
+  }
+  body .overviewImg{
+    max-width: 300px;
   }
 }
 
